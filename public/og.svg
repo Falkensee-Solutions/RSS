@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#FAF8F2"/>
+  <circle cx="1050" cy="120" r="80" fill="#F6C343" opacity="0.7"/>
+  <circle cx="120" cy="510" r="50" fill="#F6C343"/>
+  <g font-family="Georgia, 'Cormorant Garamond', serif" font-weight="700" fill="#171717">
+    <text x="100" y="240" font-size="110">Raum<tspan fill="#F6C343">.</tspan></text>
+    <text x="100" y="370" font-size="110">Stille<tspan fill="#F6C343">.</tspan></text>
+    <text x="100" y="500" font-size="110">Stimme<tspan fill="#F6C343">.</tspan></text>
+  </g>
+  <g font-family="Inter, system-ui, sans-serif" fill="#66645F">
+    <text x="100" y="570" font-size="26">Begegnungsformat für Mädchen und junge Frauen in Berlin</text>
+    <text x="100" y="605" font-size="20">Forum Dialog e.V.</text>
+  </g>
+</svg>
