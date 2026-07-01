@@ -5,9 +5,37 @@ import {
   UserCheck,
   MapPin,
   Palette,
-  Moon,
   MessagesSquare,
 } from "lucide-react";
+
+function PureNatural({ size = 18 }: { size?: number }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 48 48"
+      aria-hidden="true"
+    >
+      <title>pure-natural</title>
+      <g fill="none" stroke="currentColor" strokeWidth={4}>
+        <path
+          strokeLinecap="round"
+          d="M11 41q6.25-2.686 11.775-2.898Q28.298 37.889 37 40"
+        />
+        <path
+          strokeLinecap="round"
+          d="M23.045 44q-1.15-14.16.955-22"
+        />
+        <path
+          strokeLinejoin="round"
+          d="M24 23.176q2.385-9.027 8.4-10.766q6.014-1.74 11.6 1.594q.028 7.338-6.37 10.751q-6.4 3.414-13.63-1.579Zm-.208-1.062q1.25-10.78-5.01-15.185T4.284 4.96Q2.846 14.906 8.683 20q5.838 5.094 15.109 2.114Z"
+          clipRule="evenodd"
+        />
+      </g>
+    </svg>
+  );
+}
 
 const FACTS = [
   { Icon: Users, label: "14–18 Jahre" },
@@ -18,7 +46,7 @@ const FACTS = [
 
 const PHASES = [
   { name: "Raum", minutes: 45, label: "kreatives Tun", Icon: Palette, fraction: "w-[50%]" },
-  { name: "Stille", minutes: 15, label: "Besinnung", Icon: Moon, fraction: "w-[18%]" },
+  { name: "Stille", minutes: 15, label: "Besinnung", Icon: PureNatural, fraction: "w-[18%]" },
   { name: "Stimme", minutes: 30, label: "Austausch", Icon: MessagesSquare, fraction: "w-[33%]" },
 ];
 
