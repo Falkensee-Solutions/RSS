@@ -55,18 +55,17 @@ export function Hero() {
     <section className="relative overflow-hidden bg-rss-warm pt-12 md:pt-20">
       <div className="container-rss grid items-center gap-10 pb-12 md:grid-cols-[1.1fr,1fr] md:gap-12 md:pb-20 lg:gap-16">
         <div>
-          <p className="eyebrow">Forum Dialog e.V. · Berlin</p>
+          <p className="eyebrow">Exklusives Mädchenformat · Berlin</p>
           <h1 className="mt-3">
-            Bringen Sie{" "}
             <span className="text-rss-ink">Raum<span className="text-rss-yellow">.</span></span>{" "}
             <span className="text-rss-ink">Stille<span className="text-rss-yellow">.</span></span>{" "}
-            <span className="text-rss-ink">Stimme<span className="text-rss-yellow">.</span></span>{" "}
-            in Ihre Einrichtung.
+            <span className="text-rss-ink">Stimme<span className="text-rss-yellow">.</span></span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-rss-ink/80">
-            Ein geschütztes, interreligiös sensibles Begegnungsformat für
-            Mädchen und junge Frauen von 14 bis 18 Jahren in Berlin. Forum
-            Dialog e.V. kommt mit Konzept, Teamerinnen, Materialkoffer und
+            In einem geschützten, interreligiös
+            sensiblen Rahmen können sie unter sich kreativ sein, zur Ruhe kommen
+            und sich austauschen. Jungen nehmen an diesem Format nicht teil.
+            Forum Dialog e.V. bringt Konzept, Teamerinnen, Material und
             Moderation zu Ihnen vor Ort.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -94,7 +93,7 @@ export function Hero() {
           />
 
           <div className="relative rounded-card border border-rss-border bg-white p-6 md:p-8">
-            <p className="eyebrow">Ein Treffen · ca. 90 Minuten</p>
+            <p className="eyebrow">Nur für Mädchen · ca. 90 Minuten</p>
             <p className="mt-3 font-serif text-2xl leading-snug md:text-3xl">
               Drei Phasen, ein ruhiger Rhythmus.
             </p>

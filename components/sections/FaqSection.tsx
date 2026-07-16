@@ -17,7 +17,7 @@ const FAQS = [
   },
   {
     q: "Können Jungen teilnehmen?",
-    a: "Dieses konkrete Format ist als geschützter Mädchenraum konzipiert. Andere Formate oder Anschlussideen können im Gespräch geprüft werden.",
+    a: "Nein. Dieses Treffen ist exklusiv für Mädchen und junge Frauen von 14 bis 18 Jahren konzipiert. Der geschützte Mädchenraum ist ein wesentlicher Teil des Formats. Andere Angebote oder Anschlussideen können separat im Gespräch geprüft werden.",
   },
   {
     q: "Wie viele Teilnehmerinnen sollten dabei sein?",

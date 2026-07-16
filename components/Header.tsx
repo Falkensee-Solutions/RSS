@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { LogoMark } from "./Logo";
+import logoImage from "@/images/Logo.png";
 
 const NAV_LINKS = [
   { href: "/#format", label: "Format" },
@@ -30,9 +32,15 @@ export function Header() {
       <div className="container-rss flex h-16 items-center justify-between gap-4 md:h-20">
         <Link
           href="/"
-          className="rounded-md py-1"
+          className="flex items-center gap-2 rounded-md py-1"
           aria-label="Raum. Stille. Stimme. – Startseite"
         >
+          <Image
+            src={logoImage}
+            alt=""
+            className="h-11 w-12 shrink-0 object-contain md:h-14 md:w-16"
+            priority
+          />
           <LogoMark className="text-lg md:text-xl" />
         </Link>
 

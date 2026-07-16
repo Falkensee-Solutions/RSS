@@ -2,7 +2,7 @@ const BENEFITS = [
   {
     title: "Jugendarbeit stärken",
     text:
-      "Das Format bietet Jugendlichen einen Raum, in dem sie sich ernst genommen fühlen und Gemeinschaft erleben.",
+      "Das Format bietet Mädchen und jungen Frauen einen Raum unter sich, in dem sie sich ernst genommen fühlen und Gemeinschaft erleben.",
   },
   {
     title: "Interreligiöse Begegnung niedrigschwellig ermöglichen",

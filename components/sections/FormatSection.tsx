@@ -1,5 +1,10 @@
 import type { ComponentType } from "react";
-import { Heart, Palette, MessagesSquare } from "lucide-react";
+import type { StaticImageData } from "next/image";
+import Image from "next/image";
+import { Palette, MessagesSquare } from "lucide-react";
+import raumImage from "@/images/Raum.png";
+import stilleImage from "@/images/Stille.png";
+import stimmeImage from "@/images/Stimme.png";
 
 function StilleIcon({ size = 22 }: { size?: number }) {
   return (
@@ -30,6 +35,8 @@ const COLUMNS: {
   minutes: string;
   text: string;
   Icon: PhaseIcon;
+  image: StaticImageData;
+  imageAlt: string;
 }[] = [
   {
     title: "Raum",
@@ -37,6 +44,8 @@ const COLUMNS: {
     text:
       "Die Teilnehmerinnen gestalten, schreiben, kochen, basteln oder entwickeln gemeinsam etwas. Das kreative Tun senkt Hemmschwellen und schafft ein gemeinsames Erlebnis.",
     Icon: (props) => <Palette {...props} aria-hidden />,
+    image: raumImage,
+    imageAlt: "Mädchen beim gemeinsamen kreativen Gestalten",
   },
   {
     title: "Stille",
@@ -44,6 +53,8 @@ const COLUMNS: {
     text:
       "Eine ruhige Phase für Achtsamkeit, Nachdenken und persönliche Reflexion. Die Stille ist offen gestaltet und keine angeleitete Religionsausübung.",
     Icon: StilleIcon,
+    image: stilleImage,
+    imageAlt: "Mädchen in einer ruhigen Phase der persönlichen Reflexion",
   },
   {
     title: "Stimme",
@@ -51,6 +62,8 @@ const COLUMNS: {
     text:
       "Die Teilnehmerinnen teilen Gedanken, Fragen und Eindrücke. Im Fokus stehen aktives Zuhören, respektvolles Sprechen und gegenseitiges Verstehen.",
     Icon: (props) => <MessagesSquare {...props} aria-hidden />,
+    image: stimmeImage,
+    imageAlt: "Mädchen im moderierten gemeinsamen Austausch",
   },
 ];
 
@@ -60,13 +73,14 @@ export function FormatSection() {
       <div className="container-rss">
         <div className="max-w-3xl">
           <p className="eyebrow">Das Format</p>
-          <h2 className="mt-3">Ein einfacher Rahmen für echte Begegnung.</h2>
+          <h2 className="mt-3">Ein geschützter Raum, in dem Mädchen unter sich sind.</h2>
           <p className="mt-6 text-lg text-rss-ink/80">
-            „Raum. Stille. Stimme.“ bringt Mädchen und junge Frauen zusammen,
-            die sich über Gemeinschaft, Werte, Spiritualität und Alltag
-            austauschen möchten. Im Mittelpunkt stehen nicht Vorträge oder
-            Debatten, sondern gemeinsames Erleben, Zuhören und respektvolles
-            Sprechen.
+            „Raum. Stille. Stimme.“ ist ein Treffen exklusiv für Mädchen und
+            junge Frauen von 14 bis 18 Jahren. Ohne Jungen in der Gruppe können
+            die Teilnehmerinnen offen über Gemeinschaft, Werte, Spiritualität
+            und ihren Alltag sprechen. Im Mittelpunkt stehen gemeinsames
+            Erleben, Zuhören und respektvoller Austausch – nicht Vorträge oder
+            Debatten.
           </p>
           <p className="mt-3 text-rss-muted">
             Jedes Treffen folgt einem klaren Dreiklang:
@@ -75,7 +89,14 @@ export function FormatSection() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {COLUMNS.map((c, i) => (
-            <article key={c.title} className="card flex flex-col">
+            <article key={c.title} className="card flex flex-col overflow-hidden">
+              <div className="-mx-6 -mt-6 mb-6 flex h-52 items-center justify-center bg-rss-sand/60 p-4 md:-mx-8 md:-mt-8">
+                <Image
+                  src={c.image}
+                  alt={c.imageAlt}
+                  className="h-full w-full object-contain"
+                />
+              </div>
               <div className="flex items-center gap-3">
                 <span className="icon-circle">
                   <c.Icon size={22} />
@@ -94,18 +115,6 @@ export function FormatSection() {
           ))}
         </div>
 
-        <div
-          role="note"
-          className="mt-12 flex items-start gap-4 rounded-card border-2 border-rss-yellow bg-white p-6 md:p-8"
-        >
-          <span className="icon-circle">
-            <Heart size={22} aria-hidden />
-          </span>
-          <p className="font-serif text-xl leading-snug md:text-2xl">
-            Kein Religionsunterricht. Keine Missionierung. Kein Podium. Kein
-            Leistungsdruck.
-          </p>
-        </div>
       </div>
     </section>
   );
