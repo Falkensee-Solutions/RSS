@@ -6,20 +6,20 @@ import { CheckCircle2, AlertCircle, Send } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-const BEZIRKE = [
-  "Charlottenburg-Wilmersdorf",
-  "Friedrichshain-Kreuzberg",
-  "Lichtenberg",
-  "Marzahn-Hellersdorf",
-  "Mitte",
-  "Neukölln",
-  "Pankow",
-  "Reinickendorf",
-  "Spandau",
-  "Steglitz-Zehlendorf",
-  "Tempelhof-Schöneberg",
-  "Treptow-Köpenick",
-];
+// const BEZIRKE = [
+//   "Charlottenburg-Wilmersdorf",
+//   "Friedrichshain-Kreuzberg",
+//   "Lichtenberg",
+//   "Marzahn-Hellersdorf",
+//   "Mitte",
+//   "Neukölln",
+//   "Pankow",
+//   "Reinickendorf",
+//   "Spandau",
+//   "Steglitz-Zehlendorf",
+//   "Tempelhof-Schöneberg",
+//   "Treptow-Köpenick",
+// ];
 
 const EINRICHTUNGSARTEN = [
   "Gemeinde",
@@ -32,7 +32,7 @@ const EINRICHTUNGSARTEN = [
 ];
 
 const ZEITFENSTER = ["Werktags vormittags", "Werktags nachmittags", "Werktags abends", "Wochenende"];
-const KANAELE = ["Jugendgruppe", "Newsletter", "Aushang", "Social Media", "Messenger", "Persönliche Ansprache", "Schule", "Sonstiges"];
+// const KANAELE = ["Jugendgruppe", "Newsletter", "Aushang", "Social Media", "Messenger", "Persönliche Ansprache", "Schule", "Sonstiges"];
 
 const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@forumdialog.org";
 
@@ -48,9 +48,9 @@ function buildEmailBody(data: Record<string, FormDataEntryValue | FormDataEntryV
     "1. Einrichtung",
     `Name: ${get("einrichtung_name")}`,
     `Art: ${get("einrichtung_art")}`,
-    `Ausrichtung: ${get("ausrichtung")}`,
-    `Website: ${get("website")}`,
-    `Bezirk: ${get("bezirk")}`,
+    // `Ausrichtung: ${get("ausrichtung")}`,
+    // `Website: ${get("website")}`,
+    // `Bezirk: ${get("bezirk")}`,
     `Adresse: ${get("adresse")}`,
     "",
     "2. Kontaktperson",
@@ -63,22 +63,22 @@ function buildEmailBody(data: Record<string, FormDataEntryValue | FormDataEntryV
     "3. Rahmen vor Ort",
     `Geeigneter Raum: ${get("raum_geeignet")}`,
     `Raumbeschreibung: ${get("raum_beschreibung")}`,
-    `Ungestört nutzbar: ${get("raum_ungestoert")}`,
+    // `Ungestört nutzbar: ${get("raum_ungestoert")}`,
     `Barrierefreiheit: ${get("barrierefreiheit")}`,
     `Wasser/Verpflegung: ${get("verpflegung")}`,
     `Mögliche Zeitfenster: ${get("zeitfenster")}`,
     `Wunschtermin/Zeitraum: ${get("wunschtermin")}`,
     "",
     "4. Zielgruppe und Einladung",
-    `Erreichbarkeit 14–18: ${get("zielgruppe_erreichbar")}`,
+    // `Erreichbarkeit 14–18: ${get("zielgruppe_erreichbar")}`,
     `Erwartete Anzahl: ${get("erwartete_anzahl")}`,
-    `Einladungskanäle: ${get("kanaele")}`,
+    // `Einladungskanäle: ${get("kanaele")}`,
     `Feste Gruppe vorhanden: ${get("feste_gruppe")}`,
     "",
     "5. Haltung und Schutz",
-    `Geschützter Mädchenraum akzeptiert: ${get("zustimmung_maedchenraum") ? "Ja" : "Nein"}`,
-    `Kein Religionsunterricht/keine Missionierung bestätigt: ${get("zustimmung_kein_unterricht") ? "Ja" : "Nein"}`,
-    `Foto-/Video-Regel bestätigt: ${get("zustimmung_fotoregel") ? "Ja" : "Nein"}`,
+    // `Geschützter Mädchenraum akzeptiert: ${get("zustimmung_maedchenraum") ? "Ja" : "Nein"}`,
+    // `Kein Religionsunterricht/keine Missionierung bestätigt: ${get("zustimmung_kein_unterricht") ? "Ja" : "Nein"}`,
+    // `Foto-/Video-Regel bestätigt: ${get("zustimmung_fotoregel") ? "Ja" : "Nein"}`,
     `Besondere Hinweise: ${get("schutz_hinweise")}`,
     "",
     "6. Nachricht",
@@ -206,7 +206,7 @@ export function InquiryForm() {
             {EINRICHTUNGSARTEN.map((a) => <option key={a}>{a}</option>)}
           </select>
         </Field>
-        <Field label="Religiöse / weltanschauliche / säkulare Ausrichtung">
+        {/* <Field label="Religiöse / weltanschauliche / säkulare Ausrichtung">
           <input name="ausrichtung" className="form-input" />
         </Field>
         <Field label="Website">
@@ -224,7 +224,7 @@ export function InquiryForm() {
             <option value="" disabled>Bitte wählen</option>
             {BEZIRKE.map((b) => <option key={b}>{b}</option>)}
           </select>
-        </Field>
+        </Field> */}
         <Field label="Adresse des möglichen Veranstaltungsortes" required>
           <textarea name="adresse" required className="form-textarea" placeholder="Straße, PLZ, Ort" />
         </Field>
@@ -272,7 +272,7 @@ export function InquiryForm() {
         <Field label="Raum kurz beschreiben">
           <textarea name="raum_beschreibung" className="form-textarea" placeholder="Größe, Sitzordnung, Besonderheiten" />
         </Field>
-        <RadioGroup label="Ist der Raum ungestört nutzbar?" name="raum_ungestoert" options={["Ja", "Nein", "Unsicher"]} />
+        {/* <RadioGroup label="Ist der Raum ungestört nutzbar?" name="raum_ungestoert" options={["Ja", "Nein", "Unsicher"]} /> */}
         <RadioGroup label="Barrierefreiheit" name="barrierefreiheit" options={["Ja", "Teilweise", "Nein", "Unsicher"]} />
         <fieldset>
           <legend className="form-label">Zugang zu Wasser / kleiner Verpflegung</legend>
@@ -319,12 +319,12 @@ export function InquiryForm() {
       </Fieldset>
 
       <Fieldset legend="4. Zielgruppe und Einladung">
-        <RadioGroup
+        {/* <RadioGroup
           label="Können Sie Mädchen / junge Frauen im Alter von ca. 14–18 Jahren erreichen?"
           name="zielgruppe_erreichbar"
           options={["Ja", "Teilweise", "Unsicher"]}
           required
-        />
+        /> */}
         <Field label="Erwartete Anzahl interessierter Teilnehmerinnen">
           <select name="erwartete_anzahl" defaultValue="" className="form-select">
             <option value="">Bitte wählen</option>
@@ -335,7 +335,7 @@ export function InquiryForm() {
             <option>unsicher</option>
           </select>
         </Field>
-        <fieldset>
+        {/* <fieldset>
           <legend className="form-label">Über welche Kanäle können Sie einladen?</legend>
           <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
             {KANAELE.map((k) => (
@@ -345,12 +345,12 @@ export function InquiryForm() {
               </label>
             ))}
           </div>
-        </fieldset>
+        </fieldset> */}
         <RadioGroup label="Gibt es bereits eine feste Gruppe?" name="feste_gruppe" options={["Ja", "Nein", "Im Aufbau"]} />
       </Fieldset>
 
       <Fieldset legend="5. Haltung und Schutz">
-        <Consent
+        {/* <Consent
           name="zustimmung_maedchenraum"
           required
           label="Wir sind offen für einen geschützten Mädchenraum."
@@ -364,7 +364,7 @@ export function InquiryForm() {
           name="zustimmung_fotoregel"
           required
           label="Fotos/Videos werden nur nach Absprache und mit Einwilligung gemacht."
-        />
+        /> */}
         <Field label="Hinweise zu Schutz, Zugänglichkeit oder besonderen Bedarfen">
           <textarea name="schutz_hinweise" className="form-textarea" />
         </Field>
