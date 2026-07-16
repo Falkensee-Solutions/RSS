@@ -34,7 +34,7 @@ const FORUM = {
     { Icon: Users, title: "Teilnehmerinnen", text: "Mädchen oder junge Frauen, die von dem Format begeistert sind." },
     { Icon: Briefcase, title: "Materialkoffer", text: "Materialien für kreative Übungen, Moderation und Gesprächsimpulse." },
     { Icon: MessageCircle, title: "Moderation", text: "Einen sicheren Ablauf mit klaren Gesprächsregeln." },
-    { Icon: CupSoda, title: "Verpflegung", text: "Unsere Snacks und Getränke, die einen leckeren Austausch ermöglichen." },
+    { Icon: CupSoda, title: "Verpflegung", text: "Unsere Snacks und Mocktails, die einen leckeren Austausch ermöglichen." },
     { Icon: BarChart3, title: "Feedback und Auswertung", text: "Gemeinsame Reflexion nach der Durchführung und Weiterentwicklung des Formats." },
   ],
 };
