@@ -33,7 +33,8 @@ jobs:
       - name: Build (static export)
         run: npm run build
         env:
-          NEXT_PUBLIC_SITE_URL: https://falkensee-solutions.github.io/RSS
+          NEXT_PUBLIC_SITE_URL: http://rss.forumdialog.org
+          NEXT_PUBLIC_BASE_PATH: ""
 
       - name: Disable Jekyll
         run: touch out/.nojekyll

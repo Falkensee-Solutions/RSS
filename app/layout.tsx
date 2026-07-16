@@ -15,7 +15,7 @@ const sans = Inter({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://falkensee-solutions.github.io/RSS";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://rss.forumdialog.org";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
