@@ -34,7 +34,7 @@ const EINRICHTUNGSARTEN = [
 const ZEITFENSTER = ["Werktags vormittags", "Werktags nachmittags", "Werktags abends", "Wochenende"];
 // const KANAELE = ["Jugendgruppe", "Newsletter", "Aushang", "Social Media", "Messenger", "Persönliche Ansprache", "Schule", "Sonstiges"];
 
-const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@forumdialog.org";
+const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "rssteam@forumdialog.org";
 
 function buildEmailBody(data: Record<string, FormDataEntryValue | FormDataEntryValue[]>) {
   const get = (k: string) => {

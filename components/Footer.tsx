@@ -32,10 +32,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@forumdialog.org"
+                  href="mailto:rssteam@forumdialog.org"
                   className="inline-flex items-center gap-2 hover:underline"
                 >
-                  <Mail size={16} aria-hidden /> info@forumdialog.org
+                  <Mail size={16} aria-hidden /> rssteam@forumdialog.org
                 </a>
               </li>
               <li>

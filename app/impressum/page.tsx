@@ -55,8 +55,8 @@ export default function ImpressumPage() {
                 Telefon: 030 31519988
                 <br />
                 E-Mail:{" "}
-                <a className="underline" href="mailto:info@forumdialog.org">
-                  info@forumdialog.org
+                <a className="underline" href="mailto:rssteam@forumdialog.org">
+                  rssteam@forumdialog.org
                 </a>
                 <br />
                 Web:{" "}

@@ -34,8 +34,8 @@ export default function DatenschutzPage() {
                 Forum Dialog e.V., Ansprechpartner: Erkam Cebi,
                 <br />
                 E-Mail:{" "}
-                <a className="underline" href="mailto:info@forumdialog.org">
-                  info@forumdialog.org
+                <a className="underline" href="mailto:rssteam@forumdialog.org">
+                  rssteam@forumdialog.org
                 </a>
                 , Telefon: 030 31519988.
                 <br />
@@ -98,8 +98,8 @@ export default function DatenschutzPage() {
                 Einschränkung der Verarbeitung, Datenübertragbarkeit sowie
                 Widerspruch und Widerruf erteilter Einwilligungen. Wenden Sie
                 sich dazu an{" "}
-                <a className="underline" href="mailto:info@forumdialog.org">
-                  info@forumdialog.org
+                <a className="underline" href="mailto:rssteam@forumdialog.org">
+                  rssteam@forumdialog.org
                 </a>
                 . Es besteht zudem ein Beschwerderecht bei der zuständigen
                 Datenschutzaufsichtsbehörde.
