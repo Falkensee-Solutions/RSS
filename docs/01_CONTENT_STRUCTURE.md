@@ -170,8 +170,8 @@ Forum Dialog e.V. bringt mit:
 1. **Konzept**    
    Ein erprobbares Format mit klarer Struktur.  
   
-2. **Teamerinnen**    
-   Junge Frauen, die das Treffen begleiten und auf Augenhöhe moderieren.  
+2. **Teilnehmerinnen**    
+   Mädchen oder junge Frauen, die von dem Format begeistert sind.  
   
 3. **Materialkoffer**    
    Materialien für kreative Übungen, Moderation und Gesprächsimpulse.  
@@ -181,9 +181,7 @@ Forum Dialog e.V. bringt mit:
   
 5. **Gesprächsimpulse**    
    Fragen und Methoden, die Austausch ermöglichen, ohne Druck aufzubauen.  
-  
-6. **Feedback und Auswertung**    
-   Gemeinsame Reflexion nach der Durchführung und Weiterentwicklung des Formats.  
+   
   
 ---  
   

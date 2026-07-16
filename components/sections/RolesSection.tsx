@@ -31,11 +31,11 @@ const FORUM = {
     "Forum Dialog e.V. unterstützt bei Vorbereitung, Durchführung und Auswertung. Das Format ist so angelegt, dass Einrichtungen niedrigschwellig mitmachen können.",
   items: [
     { Icon: Lightbulb, title: "Konzept", text: "Ein erprobbares Format mit klarer Struktur." },
-    { Icon: Users, title: "Teamerinnen", text: "Junge Frauen, die das Treffen begleiten und auf Augenhöhe moderieren." },
+    { Icon: Users, title: "Teilnehmerinnen", text: "Mädchen oder junge Frauen, die von dem Format begeistert sind." },
     { Icon: Briefcase, title: "Materialkoffer", text: "Materialien für kreative Übungen, Moderation und Gesprächsimpulse." },
     { Icon: MessageCircle, title: "Moderation", text: "Einen sicheren Ablauf mit klaren Gesprächsregeln." },
     { Icon: MessagesSquare, title: "Gesprächsimpulse", text: "Fragen und Methoden, die Austausch ermöglichen, ohne Druck aufzubauen." },
-    { Icon: BarChart3, title: "Feedback und Auswertung", text: "Gemeinsame Reflexion nach der Durchführung und Weiterentwicklung des Formats." },
+    //{ Icon: BarChart3, title: "Feedback und Auswertung", text: "Gemeinsame Reflexion nach der Durchführung und Weiterentwicklung des Formats." },
   ],
 };
 
