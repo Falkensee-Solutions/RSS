@@ -2,13 +2,12 @@ import { ShieldCheck } from "lucide-react";
 
 const PRINCIPLES = [
   "Freiwilligkeit statt Leistungsdruck",
-  "Zuhören statt Bewerten",
   "Persönliche Perspektiven statt Belehrung",
-  "Keine Missionierung",
-  "Keine Bloßstellung",
-  "Keine Veröffentlichung ohne Einverständnis",
+  "Zuhören statt Bewerten",
   "Respekt vor unterschiedlichen religiösen und weltanschaulichen Hintergründen",
+  "Keine Bloßstellung",
   "Schutz der Privatsphäre der Teilnehmerinnen",
+  "Keine Veröffentlichung ohne Einverständnis",
 ];
 
 export function StanceSection() {
