@@ -21,7 +21,7 @@ const HOST = {
     { Icon: Clock, title: "Zeitfenster", text: "Ca. 90 Minuten Durchführung plus Zeit für Ankommen und Nachbereitung." },
     { Icon: UserRound, title: "Ansprechperson", text: "Eine feste Kontaktperson für Abstimmung, Zugang und Kommunikation." },
     { Icon: Megaphone, title: "Einladung über eigene Kanäle", text: "Bewerbung über Jugendgruppen, Newsletter, Aushänge, Messenger oder persönliche Ansprache." },
-    { Icon: Heart, title: "Offenheit für geschützten Mädchenraum", text: "Durchführung in einem respektvollen, geschützten Rahmen." },
+    { Icon: Heart, title: "Offenheit für Raum. Stille. Stimme.", text: "Durchführung in einem respektvollen, geschützten Rahmen." },
   ],
 };
 
