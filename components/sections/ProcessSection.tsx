@@ -20,16 +20,25 @@ export function ProcessSection() {
           </p>
         </div>
 
-        <ol className="mt-12 relative space-y-4 md:space-y-6">
+        <ol className="mt-12 relative space-y-5 md:space-y-6">
           <span
             aria-hidden
-            className="pointer-events-none absolute left-5 top-2 hidden h-[calc(100%-1rem)] w-px bg-rss-border md:block"
+            className="pointer-events-none absolute left-5 top-6 hidden w-0.5 bg-rss-yellow/40 md:block"
+            style={{ height: "calc(100% - 3rem)" }}
           />
           {STEPS.map((s, i) => (
-            <li key={s.title} className="card flex items-start gap-5 md:gap-6">
-              <span className="num-circle relative z-10">{i + 1}</span>
-              <div>
-                <h3 className="text-xl">{s.title}</h3>
+            <li key={s.title} className="relative md:grid md:grid-cols-[2.5rem_1fr] md:gap-6">
+              <span
+                className="num-circle relative z-10 ring-8 ring-rss-warm md:mt-4"
+                aria-hidden
+              >
+                {i + 1}
+              </span>
+              <div className="card mt-3 md:mt-0">
+                <p className="text-xs font-semibold uppercase tracking-widest text-rss-muted">
+                  Schritt {i + 1}
+                </p>
+                <h3 className="mt-1 font-serif text-xl md:text-2xl">{s.title}</h3>
                 <p className="mt-2 text-rss-ink/85">{s.text}</p>
               </div>
             </li>
