@@ -1,6 +1,6 @@
 const BENEFITS = [
   {
-    title: "Jugendarbeit stärken",
+    title: "Mädchen und junge Frauen stärken",
     text:
       "Das Format bietet Mädchen und jungen Frauen einen Raum unter sich, in dem sie sich ernst genommen fühlen und Gemeinschaft erleben.",
   },
@@ -9,21 +9,21 @@ const BENEFITS = [
     text:
       "Statt abstrakter Diskussionen entstehen Begegnungen über gemeinsames Tun, Stille und Gespräch.",
   },
-  {
-    title: "Mädchen und junge Frauen stärken",
-    text:
-      "Ein geschützter Rahmen für Selbstvertrauen, Ausdruck, Zuhören und gegenseitige Unterstützung.",
-  },
+//{
+//    title: "Mädchen und junge Frauen stärken",
+//    text:
+//      "Ein geschützter Rahmen für Selbstvertrauen, Ausdruck, Zuhören und gegenseitige Unterstützung.",
+//  },
   {
     title: "Neue Kooperationen aufbauen",
     text:
       "Einrichtungen lernen andere Gemeinden, Vereine und Jugendakteur*innen kennen und können langfristige Netzwerke entwickeln.",
   },
-  {
-    title: "Positive Geschichten sichtbar machen",
-    text:
-      "Auf Wunsch können anonymisierte Eindrücke und kreative Ergebnisse geteilt werden – ohne die Privatsphäre zu verletzen.",
-  },
+  //{
+  //   title: "Positive Geschichten sichtbar machen",
+  //   text:
+  //     "Auf Wunsch können anonymisierte Eindrücke und kreative Ergebnisse geteilt werden – ohne die Privatsphäre zu verletzen.",
+  // },
 ];
 
 export function BenefitsSection() {
