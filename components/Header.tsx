@@ -35,13 +35,13 @@ export function Header() {
           className="flex items-center gap-2 rounded-md py-1"
           aria-label="Raum. Stille. Stimme. – Startseite"
         >
+          <LogoMark className="text-lg md:text-xl" />
           <Image
             src={logoImage}
             alt=""
             className="h-11 w-12 shrink-0 object-contain md:h-14 md:w-16"
             priority
           />
-          <LogoMark className="text-lg md:text-xl" />
         </Link>
 
         <nav aria-label="Hauptnavigation" className="hidden lg:block">
