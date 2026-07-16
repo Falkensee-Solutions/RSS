@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { CheckCircle2, AlertCircle, Send } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -42,49 +42,50 @@ function buildEmailBody(data: Record<string, FormDataEntryValue | FormDataEntryV
     if (Array.isArray(v)) return v.join(", ");
     return (v as string) || "";
   };
-  return [
-    "Neue Anfrage für Raum. Stille. Stimme.",
+  const optionalLine = (label: string, value: string) => (value ? `${label}: ${value}` : null);
+  const lines = [
+    "Liebes Raum. Stille. Stimme.-Team,",
     "",
-    "1. Einrichtung",
+    `wir von ${get("einrichtung_name") || "unserer Einrichtung"} würden gerne gemeinsam mit euch das Format „Raum. Stille. Stimme.“ anbieten.`,
+    "",
+    "Das sind unsere Daten:",
+    "",
+    "Einrichtung",
     `Name: ${get("einrichtung_name")}`,
     `Art: ${get("einrichtung_art")}`,
-    // `Ausrichtung: ${get("ausrichtung")}`,
-    // `Website: ${get("website")}`,
-    // `Bezirk: ${get("bezirk")}`,
     `Adresse: ${get("adresse")}`,
     "",
-    "2. Kontaktperson",
+    "Kontaktperson",
     `Name: ${get("kontakt_name")}`,
-    `Rolle: ${get("kontakt_rolle")}`,
+    optionalLine("Rolle/Funktion", get("kontakt_rolle")),
     `E-Mail: ${get("kontakt_email")}`,
-    `Telefon: ${get("kontakt_telefon")}`,
-    `Bevorzugte Kontaktaufnahme: ${get("kontakt_praeferenz")}`,
+    optionalLine("Telefon", get("kontakt_telefon")),
+    optionalLine("Bevorzugte Kontaktaufnahme", get("kontakt_praeferenz")),
     "",
-    "3. Rahmen vor Ort",
-    `Geeigneter Raum: ${get("raum_geeignet")}`,
-    `Raumbeschreibung: ${get("raum_beschreibung")}`,
-    // `Ungestört nutzbar: ${get("raum_ungestoert")}`,
-    `Barrierefreiheit: ${get("barrierefreiheit")}`,
-    `Wasser/Verpflegung: ${get("verpflegung")}`,
+    "Rahmen vor Ort",
+    `Geeigneter Raum für 15–20 Teilnehmerinnen: ${get("raum_geeignet")}`,
+    optionalLine("Raumbeschreibung", get("raum_beschreibung")),
+    optionalLine("Barrierefreiheit", get("barrierefreiheit")),
+    optionalLine("Wasser/Verpflegung", get("verpflegung")),
     `Mögliche Zeitfenster: ${get("zeitfenster")}`,
-    `Wunschtermin/Zeitraum: ${get("wunschtermin")}`,
+    optionalLine("Wunschtermin/Zeitraum", get("wunschtermin")),
     "",
-    "4. Zielgruppe und Einladung",
-    // `Erreichbarkeit 14–18: ${get("zielgruppe_erreichbar")}`,
-    `Erwartete Anzahl: ${get("erwartete_anzahl")}`,
-    // `Einladungskanäle: ${get("kanaele")}`,
-    `Feste Gruppe vorhanden: ${get("feste_gruppe")}`,
+    "Zielgruppe und Einladung",
+    optionalLine("Erwartete Anzahl interessierter Teilnehmerinnen", get("erwartete_anzahl")),
+    optionalLine("Feste Gruppe vorhanden", get("feste_gruppe")),
     "",
-    "5. Haltung und Schutz",
-    // `Geschützter Mädchenraum akzeptiert: ${get("zustimmung_maedchenraum") ? "Ja" : "Nein"}`,
-    // `Kein Religionsunterricht/keine Missionierung bestätigt: ${get("zustimmung_kein_unterricht") ? "Ja" : "Nein"}`,
-    // `Foto-/Video-Regel bestätigt: ${get("zustimmung_fotoregel") ? "Ja" : "Nein"}`,
-    `Besondere Hinweise: ${get("schutz_hinweise")}`,
+    "Hinweise und Fragen",
+    optionalLine("Hinweise zu Schutz, Zugänglichkeit oder besonderen Bedarfen", get("schutz_hinweise")),
+    optionalLine("Nachricht", get("nachricht")),
     "",
-    "6. Nachricht",
-    `Nachricht: ${get("nachricht")}`,
+    "Wir sind damit einverstanden, dass Forum Dialog e.V. unsere Angaben zur Bearbeitung der Anfrage verarbeitet und uns dazu kontaktiert.",
     "",
-    `Datenschutz-Einwilligung: ${get("datenschutz") ? "Ja" : "Nein"}`,
+    "Viele Grüße",
+    get("kontakt_name") || "",
+  ];
+
+  return [
+    ...lines.filter((line) => line !== null),
   ].join("\n");
 }
 
@@ -92,7 +93,6 @@ export function InquiryForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
-  const endpoint = useMemo(() => process.env.NEXT_PUBLIC_FORM_ENDPOINT || "", []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -124,28 +124,16 @@ export function InquiryForm() {
 
     setStatus("submitting");
     try {
-      if (endpoint) {
-        const res = await fetch(endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(dataObj),
-        });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        setStatus("success");
-        form.reset();
-      } else {
-        // Mailto-Fallback
-        const subject = `RSS-Anfrage: ${dataObj.einrichtung_name || "Einrichtung"} – ${dataObj.bezirk || "Berlin"}`;
-        const body = buildEmailBody(dataObj);
-        const href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.location.href = href;
-        setStatus("success");
-      }
+      const subject = `Anfrage Raum. Stille. Stimme. – ${dataObj.einrichtung_name || "Einrichtung"}`;
+      const body = buildEmailBody(dataObj);
+      const href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = href;
+      setStatus("success");
     } catch (err) {
       console.error(err);
       setStatus("error");
       setErrorMsg(
-        "Die Anfrage konnte leider nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an " +
+        "Die Anfrage-E-Mail konnte leider nicht erstellt werden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an " +
           CONTACT_EMAIL +
           ".",
       );
@@ -158,11 +146,10 @@ export function InquiryForm() {
         <span className="icon-circle mx-auto">
           <CheckCircle2 size={26} aria-hidden />
         </span>
-        <h3 className="mt-5 font-serif text-3xl">Vielen Dank für Ihre Anfrage.</h3>
+        <h3 className="mt-5 font-serif text-3xl">Ihre Anfrage-E-Mail wurde erstellt.</h3>
         <p className="mt-4 text-rss-ink/85">
-          Wir haben Ihre Anfrage erhalten und melden uns zeitnah bei Ihnen.
-          Gemeinsam klären wir, ob und wie „Raum. Stille. Stimme.“ in Ihrer
-          Einrichtung stattfinden kann.
+          Bitte prüfen Sie die vorbereitete E-Mail in Ihrem Mailprogramm und senden
+          Sie sie ab. Danach melden wir uns zeitnah bei Ihnen zurück.
         </p>
         <div className="mt-6 flex justify-center">
           <button
@@ -173,7 +160,7 @@ export function InquiryForm() {
             }}
             className="btn-secondary"
           >
-            Neue Anfrage stellen
+            Neue Anfrage-E-Mail erstellen
           </button>
         </div>
       </div>
@@ -404,10 +391,10 @@ export function InquiryForm() {
       <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
         <button type="submit" disabled={status === "submitting"} className="btn-primary">
           <Send size={18} aria-hidden />
-          {status === "submitting" ? "Wird gesendet …" : "Anfrage absenden"}
+          {status === "submitting" ? "E-Mail wird erstellt …" : "Anfrage-E-Mail erstellen"}
         </button>
         <p className="text-sm text-rss-muted">
-          Pflichtfelder sind mit <span className="text-red-700">*</span> markiert.
+          Pflichtfelder sind mit <span className="text-red-700">*</span> markiert. Nach dem Klick öffnet sich Ihr Mailprogramm mit einer vorbereiteten E-Mail.
         </p>
       </div>
     </form>
