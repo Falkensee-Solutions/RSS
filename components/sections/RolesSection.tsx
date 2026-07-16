@@ -35,7 +35,7 @@ const FORUM = {
     { Icon: Briefcase, title: "Materialkoffer", text: "Materialien für kreative Übungen, Moderation und Gesprächsimpulse." },
     { Icon: MessageCircle, title: "Moderation", text: "Einen sicheren Ablauf mit klaren Gesprächsregeln." },
     { Icon: MessagesSquare, title: "Gesprächsimpulse", text: "Fragen und Methoden, die Austausch ermöglichen, ohne Druck aufzubauen." },
-    //{ Icon: BarChart3, title: "Feedback und Auswertung", text: "Gemeinsame Reflexion nach der Durchführung und Weiterentwicklung des Formats." },
+    { Icon: BarChart3, title: "Feedback und Auswertung", text: "Gemeinsame Reflexion nach der Durchführung und Weiterentwicklung des Formats." },
   ],
 };
 
