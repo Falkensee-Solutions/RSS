@@ -27,6 +27,15 @@ export default function ErstesTreffenPage() {
               <p className="flex items-start gap-3 text-sm"><Clock3 size={20} aria-hidden /> <span><strong>Zeitraum</strong><br />14:15–15:45 Uhr</span></p>
             </div>
 
+            <a
+              href="https://forms.gle/1pCUXmCfv5BVJJmt8"
+              className="btn-primary mt-8"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Jetzt anmelden
+            </a>
+
             <div className="legal-content mt-12 max-w-3xl">
               <h2>Unser erstes Treffen: Was entsteht, wenn viele Einzelne zusammenkommen?</h2>
               <p>Wir beginnen mit einer kleinen kreativen Überraschung. Jede Teilnehmerin gestaltet etwas Eigenes – auf ihre Weise, mit ihren eigenen Entscheidungen und Ideen.</p>

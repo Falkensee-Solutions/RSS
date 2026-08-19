@@ -31,10 +31,10 @@ export function Header() {
       <div className="container-rss flex h-16 items-center justify-between gap-4 md:h-20">
         <Link
           href="/"
-          className="flex items-center gap-2 rounded-md py-1"
+          className="flex min-w-0 items-center gap-2 rounded-md py-1"
           aria-label="Raum. Stille. Stimme. – Startseite"
         >
-          <LogoMark className="text-lg md:text-xl" />
+          <LogoMark className="truncate text-base md:text-xl" />
           <Image
             src={logoImage}
             alt=""
@@ -68,16 +68,27 @@ export function Header() {
           </Link>
         </div>
 
-        <button
-          type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-rss-border bg-white lg:hidden"
-          aria-label={open ? "Menü schließen" : "Menü öffnen"}
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          onClick={() => setOpen((o) => !o)}
-        >
-          {open ? <X size={20} aria-hidden /> : <Menu size={20} aria-hidden />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <Link
+            href="https://www.instagram.com/raum.stille.stimme/"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-rss-border bg-white"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Raum. Stille. Stimme. auf Instagram öffnen"
+          >
+            <Instagram size={20} aria-hidden />
+          </Link>
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-rss-border bg-white"
+            aria-label={open ? "Menü schließen" : "Menü öffnen"}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? <X size={20} aria-hidden /> : <Menu size={20} aria-hidden />}
+          </button>
+        </div>
       </div>
 
       {open && (
