@@ -83,6 +83,24 @@
     @apply rounded-card border border-rss-border bg-rss-sand p-6 md:p-8;
   }
 
+  .termin-scroll {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #e7ddcb transparent;
+  }
+
+  .termin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    gap: 1.5rem;
+    min-width: 22rem;
+  }
+
+  .termin-card {
+    min-width: 22rem;
+  }
+
   .section {
     @apply py-16 md:py-28;
   }

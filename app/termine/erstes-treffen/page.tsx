@@ -1,7 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CalendarDays, Clock3, MapPin } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import britzLogo from "@/images/Partnerlogos/britz evangelisch logo.png";
+import houseOfOneLogo from "@/images/Partnerlogos/hoo logo.png";
+import senatLogo from "@/images/Partnerlogos/senat logo.png";
+import stJohannesLogo from "@/images/Partnerlogos/st johannes logo.png";
 
 export const metadata = {
   title: "Erstes Treffen",
@@ -45,7 +50,23 @@ export default function ErstesTreffenPage() {
               <h2>Was genau an diesem Nachmittag entsteht?</h2>
               <p>Das erfährst du erst vor Ort.</p>
               <h2>Unsere Partner</h2>
-              <p>House of One</p>
+              <div className="mt-6 grid grid-cols-2 items-center gap-4 sm:grid-cols-4">
+                <div className="flex h-28 items-center justify-center rounded-xl border border-rss-border bg-white p-4">
+                  <Image src={britzLogo} alt="Evangelische Kirchengemeinde Berlin-Britz" className="max-h-16 w-auto object-contain" />
+                </div>
+                <div className="flex h-28 items-center justify-center rounded-xl border border-rss-border bg-white p-4">
+                  <Image src={houseOfOneLogo} alt="House of One" className="max-h-20 w-auto object-contain" />
+                </div>
+                <div className="flex h-28 items-center justify-center rounded-xl border border-rss-border bg-white p-4">
+                  <Image src={stJohannesLogo} alt="St. Johannes" className="max-h-16 w-auto object-contain" />
+                </div>
+              </div>
+              <div className="mt-10 border-t border-rss-border pt-8">
+                <p className="text-sm font-semibold text-rss-ink">Ein Projekt gefördert durch:</p>
+                <div className="mt-4 flex min-h-28 items-center rounded-xl border border-rss-border bg-white p-5 sm:max-w-sm">
+                  <Image src={senatLogo} alt="Senat von Berlin" className="max-h-16 w-full object-contain" />
+                </div>
+              </div>
             </div>
           </div>
         </article>
