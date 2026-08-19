@@ -1,5 +1,9 @@
 import Link from "next/link";
 import {
+  Users,
+  Clock,
+  UserCheck,
+  MapPin,
   Palette,
   MessagesSquare,
 } from "lucide-react";
@@ -37,6 +41,13 @@ const PHASES = [
   { name: "Raum", minutes: 45, label: "kreatives Tun", Icon: Palette, fraction: "w-[50%]" },
   { name: "Stille", minutes: 15, label: "Besinnung", Icon: PureNatural, fraction: "w-[18%]" },
   { name: "Stimme", minutes: 30, label: "Austausch", Icon: MessagesSquare, fraction: "w-[33%]" },
+];
+
+const FACTS = [
+  { Icon: Users, label: "14–18 Jahre" },
+  { Icon: Clock, label: "ca. 90 Minuten" },
+  { Icon: UserCheck, label: "15–20 Teilnehmerinnen" },
+  { Icon: MapPin, label: "in deiner Nähe" },
 ];
 
 export function Hero() {
@@ -122,6 +133,19 @@ export function Hero() {
               auf Augenhöhe.
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className="border-y border-rss-border bg-white">
+        <div className="container-rss grid grid-cols-2 gap-4 py-8 sm:grid-cols-4 md:gap-8">
+          {FACTS.map(({ Icon, label }) => (
+            <div key={label} className="flex items-center gap-3">
+              <span className="icon-circle">
+                <Icon size={22} aria-hidden />
+              </span>
+              <span className="text-sm font-medium md:text-base">{label}</span>
+            </div>
+          ))}
         </div>
       </div>
 
