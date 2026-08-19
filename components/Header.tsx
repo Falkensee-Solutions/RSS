@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Instagram, Menu, X } from "lucide-react";
 import { LogoMark } from "./Logo";
 import logoImage from "@/images/Logo.png";
 
@@ -60,6 +60,7 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Link href="https://www.instagram.com/raum.stille.stimme/" className="btn-secondary text-sm" target="_blank" rel="noreferrer">
+            <Instagram size={17} aria-hidden />
             Raum. Stille. Stimme.
           </Link>
           <Link href="/#anfrage" className="btn-primary text-sm">

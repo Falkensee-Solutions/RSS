@@ -1,9 +1,5 @@
 import Link from "next/link";
 import {
-  Users,
-  Clock,
-  UserCheck,
-  MapPin,
   Palette,
   MessagesSquare,
 } from "lucide-react";
@@ -36,13 +32,6 @@ function PureNatural({ size = 18 }: { size?: number }) {
     </svg>
   );
 }
-
-const FACTS = [
-  { Icon: Users, label: "14–18 Jahre" },
-  { Icon: Clock, label: "ca. 90 Minuten" },
-  { Icon: UserCheck, label: "15–20 Teilnehmerinnen" },
-  { Icon: MapPin, label: "in deiner Nähe" },
-];
 
 const PHASES = [
   { name: "Raum", minutes: 45, label: "kreatives Tun", Icon: Palette, fraction: "w-[50%]" },
@@ -136,18 +125,6 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="border-y border-rss-border bg-white">
-        <div className="container-rss grid grid-cols-2 gap-4 py-8 sm:grid-cols-4 md:gap-8">
-          {FACTS.map(({ Icon, label }) => (
-            <div key={label} className="flex items-center gap-3">
-              <span className="icon-circle">
-                <Icon size={22} aria-hidden />
-              </span>
-              <span className="text-sm font-medium md:text-base">{label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }
