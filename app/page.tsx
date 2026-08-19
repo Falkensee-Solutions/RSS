@@ -34,7 +34,7 @@ export default function HomePage() {
                     <p className="flex items-start gap-3"><Clock3 className="shrink-0" size={19} aria-hidden /> <span><strong>14:15–15:45</strong><br />90 Minuten</span></p>
                   </div>
                 </div>
-                <Link href="/termine/erstes-treffen" className="btn-primary mt-auto pt-3">Details ansehen</Link>
+                <Link href="/termine/erstes-treffen" className="btn-primary mt-auto pt-3 md:mt-10">Details ansehen</Link>
               </article>
             </div>
           </div>
