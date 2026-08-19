@@ -6,9 +6,9 @@ export function InquirySection() {
       <div className="container-rss">
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Anfrageformular</p>
-          <h2 className="mt-3">Möchten Sie das Format bei sich anbieten?</h2>
+          <h2 className="mt-3">Möchten Sie das Format in Ihrer Nähe anbieten?</h2>
           <p id="form-intro" className="mt-6 text-lg text-rss-ink/85">
-            Sie möchten „Raum. Stille. Stimme.“ bei sich vor Ort anbieten?
+            Sie möchten „Raum. Stille. Stimme.“ in Ihrer Nähe anbieten?
             Füllen Sie das Formular aus. Die Anfrage ist unverbindlich. Wir
             melden uns zeitnah, um Rahmen, Raum, Zielgruppe und mögliche
             Termine gemeinsam zu klären.

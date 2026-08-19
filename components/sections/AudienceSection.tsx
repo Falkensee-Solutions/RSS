@@ -22,7 +22,7 @@ export function AudienceSection() {
             Für Einrichtungen, die Mädchen einen geschützten Raum unter sich ermöglichen möchten.
           </h2>
           <p className="mt-6 text-lg text-rss-ink/85">
-            Das Format richtet sich an Einrichtungen in Berlin, die einen
+            Das Format richtet sich an Einrichtungen in Berlin und in deiner Nähe, die einen
             geschützten Raum ausschließlich für Mädchen und junge Frauen von 14
             bis 18 Jahren schaffen möchten. Die Gruppe bleibt während des
             gesamten Treffens ein Mädchenraum; Jungen nehmen nicht teil.

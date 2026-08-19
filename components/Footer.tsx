@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, Globe } from "lucide-react";
+import { Mail, Phone, Globe, Instagram } from "lucide-react";
 import { LogoMark } from "./Logo";
 
 export function Footer() {
@@ -13,6 +13,23 @@ export function Footer() {
               Ein Begegnungsformat von Forum Dialog e.V. für geschützte Räume,
               echte Begegnung und respektvollen Austausch.
             </p>
+          </div>
+
+          <div>
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-rss-muted">
+              Auf Instagram
+            </h2>
+            <p className="mt-4 text-sm text-rss-muted">
+              Aktuelle Eindrücke und Termine findest du auf unserem Instagram-Kanal.
+            </p>
+            <a
+              href="https://www.instagram.com/raum.stille.stimme/"
+              className="btn-secondary mt-5 text-sm"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Instagram size={17} aria-hidden /> @raum.stille.stimme
+            </a>
           </div>
 
           <div>

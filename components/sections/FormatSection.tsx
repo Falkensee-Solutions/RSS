@@ -2,9 +2,9 @@ import type { ComponentType } from "react";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import { Palette, MessagesSquare } from "lucide-react";
-import raumImage from "@/images/Raum.png";
-import stilleImage from "@/images/Stille.png";
-import stimmeImage from "@/images/Stimme.png";
+import raumImage from "@/images/Phase 1.png";
+import stilleImage from "@/images/Phase 2.png";
+import stimmeImage from "@/images/Phase 3.png";
 
 function StilleIcon({ size = 22 }: { size?: number }) {
   return (

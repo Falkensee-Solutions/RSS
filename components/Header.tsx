@@ -8,6 +8,7 @@ import { LogoMark } from "./Logo";
 import logoImage from "@/images/Logo.png";
 
 const NAV_LINKS = [
+  { href: "/termine", label: "Termine" },
   { href: "/#format", label: "Format" },
   { href: "/#einrichtungen", label: "Für Einrichtungen" },
   { href: "/#ablauf", label: "Ablauf" },
@@ -60,8 +61,8 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Link href="/#anfrage" className="btn-primary text-sm">
-            Anfrage stellen
+          <Link href="https://www.instagram.com/raum.stille.stimme/" className="btn-secondary text-sm" target="_blank" rel="noreferrer">
+            Instagram
           </Link>
         </div>
 

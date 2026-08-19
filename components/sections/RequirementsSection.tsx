@@ -5,7 +5,7 @@ const REQS = [
   "Sitzmöglichkeiten im Kreis oder in offener Anordnung",
   "Zeitfenster von ca. 90 Minuten plus Ankommen",
   "Zugang zu Wasser und ggf. kleiner Verpflegung",
-  "Eine feste Ansprechperson vor Ort",
+  "Eine feste Ansprechperson in deiner Nähe",
   "Möglichkeit zur Bewerbung über eigene Kanäle",
   "Offenheit für einen geschützten Mädchenraum",
   "Klärung von Barrierefreiheit und Zugänglichkeit",
@@ -17,8 +17,8 @@ export function RequirementsSection() {
     <section id="voraussetzungen" className="section bg-rss-sand/60">
       <div className="container-rss grid gap-12 md:grid-cols-[1fr,1.2fr] md:items-start">
         <div>
-          <p className="eyebrow">Voraussetzungen vor Ort</p>
-          <h2 className="mt-3">Was wir vor Ort brauchen.</h2>
+          <p className="eyebrow">Voraussetzungen in deiner Nähe</p>
+          <h2 className="mt-3">Was wir in deiner Nähe brauchen.</h2>
           <p className="mt-6 text-lg text-rss-ink/85">
             Das Format ist bewusst niedrigschwellig. Für eine gute Durchführung
             helfen folgende Rahmenbedingungen.

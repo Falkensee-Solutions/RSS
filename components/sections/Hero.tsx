@@ -41,7 +41,7 @@ const FACTS = [
   { Icon: Users, label: "14–18 Jahre" },
   { Icon: Clock, label: "ca. 90 Minuten" },
   { Icon: UserCheck, label: "15–20 Teilnehmerinnen" },
-  { Icon: MapPin, label: "bei Ihnen vor Ort" },
+  { Icon: MapPin, label: "in deiner Nähe" },
 ];
 
 const PHASES = [
@@ -66,7 +66,7 @@ export function Hero() {
             sensiblen Rahmen können sie unter sich kreativ sein, zur Ruhe kommen
             und sich austauschen. Jungen nehmen an diesem Format nicht teil.
             Forum Dialog e.V. bringt Konzept, Teamerinnen, Material und
-            Moderation zu Ihnen vor Ort.
+            Moderation in deiner Nähe.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="#anfrage" className="btn-primary">

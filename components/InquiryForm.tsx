@@ -62,7 +62,7 @@ function buildEmailBody(data: Record<string, FormDataEntryValue | FormDataEntryV
     optionalLine("Telefon", get("kontakt_telefon")),
     optionalLine("Bevorzugte Kontaktaufnahme", get("kontakt_praeferenz")),
     "",
-    "Rahmen vor Ort",
+    "Rahmen in deiner Nähe",
     `Geeigneter Raum für 15–20 Teilnehmerinnen: ${get("raum_geeignet")}`,
     optionalLine("Raumbeschreibung", get("raum_beschreibung")),
     optionalLine("Barrierefreiheit", get("barrierefreiheit")),
@@ -249,7 +249,7 @@ export function InquiryForm() {
         </fieldset>
       </Fieldset>
 
-      <Fieldset legend="3. Rahmen vor Ort">
+      <Fieldset legend="3. Rahmen in deiner Nähe">
         <RadioGroup
           label="Gibt es einen geeigneten Raum für 15–20 Teilnehmerinnen?"
           name="raum_geeignet"

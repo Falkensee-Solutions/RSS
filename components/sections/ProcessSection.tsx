@@ -2,7 +2,7 @@ const STEPS = [
   { title: "Kennenlernen", text: "Wir tauschen uns über Ziele, Zielgruppe, Rahmen und Möglichkeiten aus." },
   { title: "Raum prüfen", text: "Wir klären gemeinsam, ob der Raum geeignet ist und welche Rahmenbedingungen wichtig sind." },
   { title: "Einladen", text: "Sie laden Mädchen und junge Frauen über Ihre Kanäle ein. Wir stellen Textbausteine und Materialien zur Verfügung." },
-  { title: "Durchführen", text: "Wir gestalten das Treffen gemeinsam vor Ort. Forum Dialog e.V. bringt Team, Konzept und Material mit." },
+  { title: "Durchführen", text: "Wir gestalten das Treffen gemeinsam in deiner Nähe. Forum Dialog e.V. bringt Team, Konzept und Material mit." },
   { title: "Auswerten", text: "Wir reflektieren gemeinsam, was gut funktioniert hat und wie eine weitere Zusammenarbeit aussehen kann." },
 ];
 
@@ -12,7 +12,7 @@ export function ProcessSection() {
       <div className="container-rss">
         <div className="max-w-3xl">
           <p className="eyebrow">Ablauf</p>
-          <h2 className="mt-3">In fünf Schritten zum Treffen vor Ort.</h2>
+          <h2 className="mt-3">In fünf Schritten zum Treffen in deiner Nähe.</h2>
           <p className="mt-6 text-lg text-rss-ink/80">
             Von der ersten Anfrage bis zur gemeinsamen Auswertung begleiten wir
             Sie. Sie entscheiden mit, welchen Rahmen Ihre Einrichtung

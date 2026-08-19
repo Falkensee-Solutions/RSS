@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Raum. Stille. Stimme.",
     description:
-      "Begegnungsformat für Mädchen und junge Frauen in Berlin. Forum Dialog e.V. bringt Konzept, Teamerinnen und Material zu Ihnen vor Ort.",
+      "Begegnungsformat für Mädchen und junge Frauen in Berlin und in deiner Nähe. Forum Dialog e.V. bringt Konzept, Teamerinnen und Material mit.",
     url: siteUrl,
     siteName: "Raum. Stille. Stimme.",
     locale: "de_DE",
