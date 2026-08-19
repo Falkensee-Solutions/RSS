@@ -19,7 +19,7 @@ export default function HomePage() {
       <Header />
       <main id="main">
         <Hero />
-        <section id="termine" className="section scroll-mt-24 bg-white">
+        <section id="termine" className="section bg-white">
           <div className="container-rss">
             <p className="eyebrow">Kommende Treffen</p>
             <h2 className="mt-3">Aktuelle Termine</h2>
