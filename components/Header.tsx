@@ -11,8 +11,6 @@ const NAV_LINKS = [
   { href: "/#termine", label: "Termine" },
   { href: "/#format", label: "Format" },
   { href: "/#einrichtungen", label: "Für Einrichtungen" },
-  { href: "/#ablauf", label: "Ablauf" },
-  { href: "/#voraussetzungen", label: "Voraussetzungen" },
   { href: "/#faq", label: "FAQ" },
 ];
 
@@ -62,7 +60,7 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Link href="https://www.instagram.com/raum.stille.stimme/" className="btn-secondary text-sm" target="_blank" rel="noreferrer">
-            Instagram
+            Raum. Stille. Stimme.
           </Link>
           <Link href="/#anfrage" className="btn-primary text-sm">
             Anfrage stellen
@@ -104,7 +102,7 @@ export function Header() {
                   rel="noreferrer"
                   onClick={() => setOpen(false)}
                 >
-                  Instagram folgen
+                  Raum. Stille. Stimme.
                 </Link>
               </li>
               <li className="pt-2">

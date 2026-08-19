@@ -11,7 +11,6 @@ import { StanceSection } from "@/components/sections/StanceSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { InquirySection } from "@/components/sections/InquirySection";
 import Link from "next/link";
-import { Instagram } from "lucide-react";
 import { CalendarDays, Clock3, MapPin } from "lucide-react";
 
 export default function HomePage() {
@@ -20,27 +19,11 @@ export default function HomePage() {
       <Header />
       <main id="main">
         <Hero />
-        <section className="border-y border-rss-border bg-white py-8">
-          <div className="container-rss flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-            <div>
-              <p className="eyebrow">Folge uns</p>
-              <p className="mt-1 font-serif text-2xl">Aktuelle Termine und Eindrücke auf Instagram.</p>
-            </div>
-            <Link href="https://www.instagram.com/raum.stille.stimme/" className="btn-primary" target="_blank" rel="noreferrer">
-              <Instagram size={19} aria-hidden /> @raum.stille.stimme
-            </Link>
-          </div>
-        </section>
-        <section id="termine" className="section scroll-mt-24">
+        <section id="termine" className="section scroll-mt-24 bg-white">
           <div className="container-rss">
             <p className="eyebrow">Kommende Treffen</p>
-            <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-              <h2 className="mt-3">Aktuelle Termine</h2>
-              <Link href="https://www.instagram.com/raum.stille.stimme/" className="text-sm font-semibold underline underline-offset-4" target="_blank" rel="noreferrer">
-                Weitere Termine auf Instagram
-              </Link>
-            </div>
-            <article className="card-sand mt-10 max-w-4xl">
+            <h2 className="mt-3">Aktuelle Termine</h2>
+            <article className="card-sand mt-10 max-w-3xl shadow-sm">
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <p className="eyebrow">Nächster Termin</p>
@@ -48,10 +31,10 @@ export default function HomePage() {
                 </div>
                 <span className="rounded-full bg-rss-yellow px-4 py-2 text-sm font-semibold">29.08.26</span>
               </div>
-              <div className="mt-7 grid gap-4 text-sm sm:grid-cols-3">
-                <p className="flex items-start gap-3"><MapPin size={19} aria-hidden /> Forum Dialog, Mohrenstraße 34, Berlin</p>
-                <p className="flex items-start gap-3"><CalendarDays size={19} aria-hidden /> 29.08.2026</p>
-                <p className="flex items-start gap-3"><Clock3 size={19} aria-hidden /> 14:15–15:45 Uhr</p>
+              <div className="mt-7 grid gap-3 border-t border-rss-border/70 pt-6 text-sm sm:grid-cols-3">
+                <p className="flex items-start gap-3"><MapPin className="shrink-0" size={19} aria-hidden /> <span>Forum Dialog<br />Mohrenstraße 34, Berlin</span></p>
+                <p className="flex items-start gap-3"><CalendarDays className="shrink-0" size={19} aria-hidden /> <span><strong>29.08.2026</strong><br />Samstag</span></p>
+                <p className="flex items-start gap-3"><Clock3 className="shrink-0" size={19} aria-hidden /> <span><strong>14:15–15:45</strong><br />90 Minuten</span></p>
               </div>
               <Link href="/termine/erstes-treffen" className="btn-primary mt-8">Details ansehen</Link>
             </article>
