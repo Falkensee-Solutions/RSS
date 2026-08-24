@@ -9,7 +9,7 @@ const config: Config = {
     extend: {
       colors: {
         rss: {
-          yellow: "#F6C343",
+          yellow: "#FCCF37",
           "yellow-dark": "#E5B12F",
           ink: "#171717",
           warm: "#FAF8F2",
