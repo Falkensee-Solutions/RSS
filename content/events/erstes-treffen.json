@@ -1,0 +1,32 @@
+{
+  "title": "Erstes Treffen",
+  "slug": "erstes-treffen",
+  "published": true,
+  "startDate": "2026-08-29T14:15:00+02:00",
+  "endDate": "2026-08-29T15:45:00+02:00",
+  "weekday": "Samstag",
+  "time": "14:15–15:45",
+  "duration": "90 Minuten",
+  "location": "Forum Dialog",
+  "address": "Mohrenstraße 34, 10117 Berlin",
+  "summary": "Unser erstes Treffen von Raum. Stille. Stimme.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wir beginnen mit einer kleinen kreativen Überraschung. Jede Teilnehmerin gestaltet etwas Eigenes – auf ihre Weise, mit ihren eigenen Entscheidungen und Ideen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Was daraus am Ende entsteht, verraten wir noch nicht."
+    }
+  ],
+  "registrationUrl": "https://forms.gle/1pCUXmCfv5BVJJmt8",
+  "flyer": null,
+  "gallery": [],
+  "partners": [
+    { "name": "House of One", "logo": "/images/Partnerlogos/hoo logo.png" }
+  ],
+  "funders": [
+    { "name": "Senat von Berlin", "logo": "/images/Partnerlogos/senat logo.png" }
+  ]
+}

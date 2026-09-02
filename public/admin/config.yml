@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: Falkensee-Solutions/RSS
+  branch: main
+
+media_folder: /public/uploads
+
+collections:
+  - name: events
+    label: Veranstaltungen
+    label_singular: Veranstaltung
+    folder: /content/events
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    sortable_fields: [startDate, title]
+    fields:
+      - { label: Titel, name: title, widget: string }
+      - { label: URL-Slug, name: slug, widget: string, hint: "Nur Kleinbuchstaben und Bindestriche, z. B. erstes-treffen" }
+      - { label: Veröffentlicht, name: published, widget: boolean, default: false }
+      - { label: Beginn, name: startDate, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "DD.MM.YYYY", time_format: "HH:mm" }
+      - { label: Ende, name: endDate, widget: datetime, required: false, format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "DD.MM.YYYY", time_format: "HH:mm" }
+      - { label: Wochentag, name: weekday, widget: string, required: false }
+      - { label: Anzeigezeit, name: time, widget: string, required: false }
+      - { label: Dauer, name: duration, widget: string, required: false }
+      - { label: Ort, name: location, widget: string, required: false }
+      - { label: Adresse, name: address, widget: string, required: false }
+      - { label: Kurzbeschreibung, name: summary, widget: text, required: false }
+      - { label: Beschreibung, name: body, widget: list, required: false, field: { label: Absatz, name: text, widget: text } }
+      - { label: Anmeldelink, name: registrationUrl, widget: url, required: false }
+      - { label: Flyer, name: flyer, widget: file, required: false, media_folder: /public/uploads, public_folder: /uploads }
+      - label: Galerie
+        name: gallery
+        widget: list
+        required: false
+        fields:
+          - { label: Bild, name: image, widget: image }
+          - { label: Alternativtext, name: alt, widget: string }
+          - { label: Bildunterschrift, name: caption, widget: string, required: false }
+      - label: Partner
+        name: partners
+        widget: list
+        required: false
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Website, name: url, widget: url, required: false }
+          - { label: Logo, name: logo, widget: image, required: false }
+      - label: Förderer
+        name: funders
+        widget: list
+        required: false
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Website, name: url, widget: url, required: false }
+          - { label: Logo, name: logo, widget: image, required: false }

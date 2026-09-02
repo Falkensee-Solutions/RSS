@@ -1,16 +1,11 @@
-import { createClient } from "@sanity/client";
-import imageUrlBuilder from "@sanity/image-url";
+import fs from "node:fs/promises";
+import path from "node:path";
 
-export type SanityImage = {
-  _type: "image";
-  asset?: { _ref: string };
-  alt?: string;
-  caption?: string;
-};
+export type ImageAsset = string;
 
 export type Partner = {
   name: string;
-  logo?: SanityImage;
+  logo?: ImageAsset;
   url?: string;
 };
 
@@ -26,88 +21,36 @@ export type Event = {
   location?: string;
   address?: string;
   summary?: string;
-  body?: unknown[];
+  published?: boolean;
+  body?: { type: "paragraph"; text: string }[];
   registrationUrl?: string;
-  flyer?: { asset?: { _ref: string }; title?: string };
-  gallery?: SanityImage[];
+  flyer?: string | null;
+  gallery?: { image: string; alt?: string; caption?: string }[];
   partners?: Partner[];
   funders?: Partner[];
 };
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
-const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2026-01-01";
+const eventsDirectory = path.join(process.cwd(), "content/events");
 
-export const sanityEnabled = Boolean(projectId);
-
-const client = projectId
-  ? createClient({
-      projectId,
-      dataset,
-      apiVersion,
-      useCdn: process.env.CI !== "true",
-      perspective: "published",
-    })
-  : null;
-
-const imageBuilder = client ? imageUrlBuilder(client) : null;
-
-export function sanityImageUrl(source: SanityImage | undefined, width = 1200) {
-  if (!imageBuilder || !source?.asset) return undefined;
-  return imageBuilder.image(source).width(width).auto("format").url();
+async function readEventFile(filename: string): Promise<Event | null> {
+  try {
+    const content = await fs.readFile(path.join(eventsDirectory, filename), "utf8");
+    const event = JSON.parse(content) as Event;
+    return { ...event, _id: filename.replace(/\.json$/, "") };
+  } catch {
+    return null;
+  }
 }
-
-export function sanityFileUrl(file: { asset?: { _ref: string } } | undefined) {
-  const ref = file?.asset?._ref;
-  if (!projectId || !ref) return undefined;
-  const [, assetId, extension] = ref.split("-");
-  if (!assetId || !extension) return undefined;
-  return `https://cdn.sanity.io/files/${projectId}/${dataset}/${assetId}.${extension}`;
-}
-
-const eventProjection = `{
-  _id,
-  title,
-  "slug": slug.current,
-  startDate,
-  endDate,
-  weekday,
-  time,
-  duration,
-  location,
-  address,
-  summary,
-  body,
-  registrationUrl,
-  flyer,
-  gallery[]{..., asset},
-  partners[]{name, url, logo},
-  funders[]{name, url, logo}
-}`;
-
-const fallbackEvents: Event[] = [
-  {
-    _id: "fallback-erstes-treffen",
-    title: "Erstes Treffen",
-    slug: "erstes-treffen",
-    startDate: "2026-08-29T14:15:00+02:00",
-    weekday: "Samstag",
-    time: "14:15–15:45",
-    duration: "90 Minuten",
-    location: "Forum Dialog",
-    address: "Mohrenstraße 34, Berlin",
-    summary: "Unser erstes Treffen von Raum. Stille. Stimme.",
-  },
-];
 
 export async function getEvents(): Promise<Event[]> {
-  if (!client) return fallbackEvents;
-  return client.fetch<Event[]>(`*[_type == "event" && published == true] | order(startDate asc) ${eventProjection}`, {}, { next: { revalidate: 0 } });
+  const filenames = await fs.readdir(eventsDirectory).catch(() => []);
+  const events = await Promise.all(filenames.filter((file) => file.endsWith(".json")).map(readEventFile));
+  return events.filter((event): event is Event => Boolean(event?.published)).sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
 
 export async function getEventBySlug(slug: string) {
-  if (!client) return fallbackEvents.find((event) => event.slug === slug);
-  return client.fetch<Event | null>(`*[_type == "event" && published == true && slug.current == $slug][0] ${eventProjection}`, { slug });
+  const events = await getEvents();
+  return events.find((event) => event.slug === slug);
 }
 
 export function isPastEvent(event: Event, now = new Date()) {
