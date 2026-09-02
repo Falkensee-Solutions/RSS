@@ -3,7 +3,8 @@ import Image from "next/image";
 import { CalendarDays, Clock3, MapPin } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { formatEventDate, getEventBySlug, getEvents } from "@/lib/events";
+import { getEventBySlug, getEvents } from "@/lib/events";
+import { formatEventDate } from "@/lib/event-types";
 
 export async function generateStaticParams() {
   const events = await getEvents();
@@ -12,14 +13,14 @@ export async function generateStaticParams() {
 
 export default async function EventDetailPage({ params }: { params: { slug: string } }) {
   const event = await getEventBySlug(params.slug);
-  if (!event) return <><Header /><main id="main" className="section"><div className="container-rss"><h1>Termin nicht gefunden</h1><Link href="/termine" className="mt-6 inline-block underline">← Alle Termine</Link></div></main><Footer /></>;
+  if (!event) return <><Header /><main id="main" className="section"><div className="container-rss"><h1>Termin nicht gefunden</h1><Link href="/#termine" className="mt-6 inline-block underline">← Zu den Terminen</Link></div></main><Footer /></>;
 
   const flyerUrl = event.flyer;
   const media = event.gallery || [];
   const logos = [...(event.partners || []), ...(event.funders || [])];
 
   return <><Header /><main id="main"><article className="section"><div className="container-rss max-w-4xl">
-    <Link href="/termine" className="text-sm font-semibold underline underline-offset-4">← Alle Termine</Link>
+    <Link href="/#termine" className="text-sm font-semibold underline underline-offset-4">← Zu den Terminen</Link>
     <p className="eyebrow mt-10">Veranstaltung</p><h1 className="mt-3">{event.title}</h1>
     <div className="card-sand mt-8 grid gap-5 sm:grid-cols-3">
       {(event.location || event.address) && <p className="flex items-start gap-3 text-sm"><MapPin size={20} aria-hidden /><span><strong>Ort</strong><br />{event.location}<br />{event.address}</span></p>}

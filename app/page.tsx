@@ -11,10 +11,13 @@ import { StanceSection } from "@/components/sections/StanceSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { InquirySection } from "@/components/sections/InquirySection";
 import { UpcomingMeetings } from "@/components/UpcomingMeetings";
+import { EventCarousel } from "@/components/EventCarousel";
 import { getEvents, isPastEvent } from "@/lib/events";
 
 export default async function HomePage() {
-  const events = (await getEvents()).filter((event) => !isPastEvent(event));
+  const allEvents = await getEvents();
+  const events = allEvents.filter((event) => !isPastEvent(event));
+  const pastEvents = allEvents.filter((event) => isPastEvent(event)).reverse();
   return (
     <>
       <Header />
@@ -25,6 +28,12 @@ export default async function HomePage() {
             <p className="eyebrow">Kommende Treffen</p>
             <h2 className="mt-3">Aktuelle Termine</h2>
             <UpcomingMeetings events={events} />
+            <div className="mt-20 border-t border-rss-border/70 pt-14">
+              <p className="eyebrow">Archiv</p>
+              <h2 className="mt-3">Vergangene Termine</h2>
+              <p className="mt-4 max-w-2xl text-rss-ink/80">Hier findest du Eindrücke und Informationen zu vergangenen Veranstaltungen.</p>
+              <EventCarousel events={pastEvents} past />
+            </div>
           </div>
         </section>
         <FormatSection />
