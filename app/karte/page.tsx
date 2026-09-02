@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { getEvents } from "@/lib/events";
 import { MAP_SIZE, pixelToPercent, plusCodeToPixel } from "@/lib/plus-code-map";
+import mapImage from "@/karte/haritawebseite.png";
 
 export const metadata: Metadata = {
   title: "Testkarte",
@@ -36,7 +37,7 @@ export default async function MapTestPage() {
             <div className="overflow-hidden rounded-card border border-rss-border bg-white p-3 shadow-sm md:p-5">
               <div className="relative mx-auto w-full max-w-[938px]" style={{ aspectRatio: `${MAP_SIZE.width} / ${MAP_SIZE.height}` }}>
                 <Image
-                  src="/karte/haritawebseite.png"
+                  src={mapImage}
                   alt="Karte der Region Berlin mit markierten Veranstaltungsorten"
                   fill
                   sizes="(min-width: 1024px) 70vw, 100vw"
