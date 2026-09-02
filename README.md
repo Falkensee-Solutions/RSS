@@ -116,6 +116,9 @@ public/og.svg         # Platzhalter Open-Graph-Bild
 
 ## Offene TODOs
 
+- [ ] Sanity einmalig nach `docs/SANITY_SETUP.md` einrichten und
+      `SANITY_PROJECT_ID` als GitHub-Actions-Variable setzen.
+
 - [ ] **Formular-Backend** anschließen (E-Mail-Service oder API)
       und Endpoint via `NEXT_PUBLIC_FORM_ENDPOINT` setzen.
 - [ ] **Impressum** durch Forum Dialog e.V. final prüfen und

@@ -1,0 +1,31 @@
+name: Validate CMS configuration
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Sanity project variable
+        env:
+          SANITY_PROJECT_ID: ${{ vars.SANITY_PROJECT_ID }}
+        run: |
+          if [ -z "$SANITY_PROJECT_ID" ]; then
+            echo "SANITY_PROJECT_ID fehlt. Bitte Repository Settings > Secrets and variables > Actions > Variables setzen."
+            exit 1
+          fi
+          echo "SANITY_PROJECT_ID ist konfiguriert."
+
+      - name: Check dataset variable
+        env:
+          SANITY_DATASET: ${{ vars.SANITY_DATASET }}
+        run: |
+          if [ -z "$SANITY_DATASET" ]; then
+            echo "SANITY_DATASET ist nicht gesetzt; production wird als Standard verwendet."
+          else
+            echo "SANITY_DATASET ist konfiguriert: $SANITY_DATASET"
+          fi
