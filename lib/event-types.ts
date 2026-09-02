@@ -33,6 +33,8 @@ export type Event = {
   registrationNote?: string;
   /** Flyer als Bild – wird auf der Detailseite rechts angezeigt. */
   flyerImage?: ImageAsset | null;
+  /** Veranstaltungsbild – wird oberhalb der Beschreibung angezeigt. */
+  eventImage?: ImageAsset | null;
   /** Flyer als Datei (PDF) zum Download. */
   flyer?: string | null;
   gallery?: { image: string; alt?: string; caption?: string }[];

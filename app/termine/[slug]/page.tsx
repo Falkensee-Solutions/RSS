@@ -104,11 +104,17 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                     <Clock3 className="mt-0.5 shrink-0" size={21} aria-hidden />
                     <p className="text-sm"><strong className="block text-rss-ink">Uhrzeit</strong><span className="mt-1 block">{time}</span></p>
                   </div>
-                  <div className="row-span-2 flex gap-3 border-l border-rss-border p-5 sm:p-6">
+                  <div className="col-span-2 flex gap-3 border-t border-rss-border p-5 sm:p-6">
                     <MapPin className="mt-0.5 shrink-0" size={21} aria-hidden />
                     <p className="text-sm"><strong className="block text-rss-ink">Ort</strong><span className="mt-1 block">{event.location}{event.address ? <><br />{event.address}</> : null}</span>{event.mapUrl && <a href={event.mapUrl} target="_blank" rel="noreferrer" className="mt-2 inline-flex items-center gap-1 font-semibold underline underline-offset-2">Karte öffnen <ExternalLink size={13} aria-hidden /></a>}</p>
                   </div>
                 </section>
+
+                {event.eventImage && (
+                  <figure className="mt-10 overflow-hidden rounded-card border border-rss-border bg-white">
+                    <Image src={event.eventImage} width={1600} height={1000} alt={`Bild zur Veranstaltung „${event.title}“`} className="h-auto w-full object-cover" />
+                  </figure>
+                )}
 
                 {body && <div className="event-content mt-12"><Markdown>{body}</Markdown></div>}
 
@@ -145,14 +151,14 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                       <>
                         <h2 className="text-2xl">Dabei sein</h2>
                         <p className="mt-2 text-sm text-rss-ink/70">{event.registrationNote || "Melde dich über unser Online-Formular für dieses Treffen an."}</p>
-                        <a href={event.registrationUrl} target="_blank" rel="noreferrer" className="btn-primary mt-5 w-full">
+                        <a href={event.registrationUrl.trim()} target="_blank" rel="noreferrer" className="btn-primary mt-5 w-full">
                           {event.registrationLabel || "Jetzt anmelden"} <ExternalLink size={17} aria-hidden />
                         </a>
                       </>
                     )}
                     {event.flyer && (
                       <a href={event.flyer} target="_blank" rel="noreferrer" className={`btn-secondary w-full ${event.registrationUrl ? "mt-3" : ""}`}>
-                        <Download size={17} aria-hidden /> Flyer herunterladen
+                        <Download size={17} aria-hidden /> Flyer ansehen / herunterladen
                       </a>
                     )}
                   </div>

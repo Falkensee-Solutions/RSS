@@ -31,12 +31,13 @@ collections:
       - { label: Dauer (optional), name: duration, widget: string, required: false, hint: "Nur ergänzen, wenn zusätzlich z. B. „90 Minuten“ erscheinen soll." }
       - { label: Ort, name: location, widget: string, required: false, hint: "Name des Veranstaltungsorts, z. B. Forum Dialog." }
       - { label: Adresse, name: address, widget: string, required: false }
-      - { label: Kartenlink, name: mapUrl, widget: url, required: false, hint: "Optionaler Link zu Google Maps oder OpenStreetMap." }
+      - { label: Kartenlink, name: mapUrl, widget: string, required: false, hint: "Optional: Google-Maps-Link einfügen, z. B. https://maps.google.com/..." }
       - { label: Kurzbeschreibung, name: summary, widget: text, required: false, hint: "Ein bis zwei Sätze. Erscheint direkt unter dem Titel und in Suchmaschinen." }
       - { label: Beschreibung, name: body, widget: markdown, required: false, minimal: true, buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote], editor_components: [], hint: "Hier normal schreiben und mit der Werkzeugleiste Überschriften, Listen, Fettungen oder Links einfügen. Leerzeilen erzeugen neue Absätze." }
-      - { label: Anmeldelink, name: registrationUrl, widget: url, required: false, hint: "Vollständige URL zum Anmeldeformular. Ohne Link erscheint kein Anmelde-Button." }
+      - { label: Anmeldelink, name: registrationUrl, widget: string, required: false, hint: "Vollständige URL einfügen, z. B. https://forms.google.com/... Ohne Link erscheint kein Anmelde-Button." }
       - { label: Text auf dem Anmelde-Button, name: registrationLabel, widget: string, required: false, default: "Jetzt anmelden" }
       - { label: Hinweis zur Anmeldung, name: registrationNote, widget: text, required: false, hint: "Kurzer Hinweis, z. B. „Kostenlos · begrenzte Plätze“.", default: "Kostenlos · begrenzte Plätze" }
+      - { label: Bild der Veranstaltung, name: eventImage, widget: image, required: false, hint: "Optionales Bild zur Veranstaltung. Es erscheint oberhalb der Beschreibung." }
       - { label: Flyerbild, name: flyerImage, widget: image, required: false, hint: "Hochformatiges JPG, PNG oder WebP. Wird rechts auf der Detailseite angezeigt." }
       - { label: Flyer zum Herunterladen, name: flyer, widget: file, required: false, hint: "Optional: PDF-Datei für den Download-Button." }
       - label: Galerie
@@ -56,7 +57,7 @@ collections:
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Website, name: url, widget: url, required: false, hint: "Vollständige URL inklusive https://" }
-          - { label: Logo, name: logo, widget: image, required: false }
+          - { label: Logo-URL, name: logo, widget: string, required: false, hint: "Direkte Bild-URL einfügen, z. B. https://example.org/logo.png. Auch lokale Pfade wie /uploads/logo.png sind möglich." }
       - label: Förderer
         name: funders
         widget: list
@@ -65,4 +66,4 @@ collections:
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Website, name: url, widget: url, required: false }
-          - { label: Logo, name: logo, widget: image, required: false }
+          - { label: Logo-URL, name: logo, widget: string, required: false, hint: "Direkte Bild-URL einfügen, z. B. https://example.org/logo.png. Auch lokale Pfade wie /uploads/logo.png sind möglich." }
