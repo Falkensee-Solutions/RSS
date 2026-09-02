@@ -22,6 +22,8 @@ export type Event = {
   address?: string;
   /** Optionaler Link zu Google Maps o. Ä. für die Adresse. */
   mapUrl?: string;
+  /** Plus Code für die Position auf der internen Testkarte. */
+  plusCode?: string;
   summary?: string;
   published?: boolean;
   /** Markdown-Text aus dem CMS. */

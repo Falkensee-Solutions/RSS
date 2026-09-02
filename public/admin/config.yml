@@ -32,6 +32,7 @@ collections:
       - { label: Ort, name: location, widget: string, required: false, hint: "Name des Veranstaltungsorts, z. B. Forum Dialog." }
       - { label: Adresse, name: address, widget: string, required: false }
       - { label: Kartenlink, name: mapUrl, widget: string, required: false, hint: "Optional: Google-Maps-Link einfügen, z. B. https://maps.google.com/..." }
+      - { label: Plus Code für Testkarte, name: plusCode, widget: string, required: false, hint: "Optionaler Google Plus Code, z. B. 9G72+XC Schönefeld. Wird nur auf der internen Testkarte verwendet." }
       - { label: Kurzbeschreibung, name: summary, widget: text, required: false, hint: "Ein bis zwei Sätze. Erscheint direkt unter dem Titel und in Suchmaschinen." }
       - { label: Beschreibung, name: body, widget: markdown, required: false, minimal: true, buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote], editor_components: [], hint: "Hier normal schreiben und mit der Werkzeugleiste Überschriften, Listen, Fettungen oder Links einfügen. Leerzeilen erzeugen neue Absätze." }
       - { label: Anmeldelink, name: registrationUrl, widget: string, required: false, hint: "Vollständige URL einfügen, z. B. https://forms.google.com/... Ohne Link erscheint kein Anmelde-Button." }

@@ -211,6 +211,10 @@
   .event-content blockquote {
     @apply my-7 border-l-4 border-rss-yellow bg-rss-sand px-5 py-4 font-serif text-xl italic text-rss-ink;
   }
+
+  .map-test-page img {
+    image-rendering: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
