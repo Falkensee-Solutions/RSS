@@ -25,8 +25,7 @@ export function EventCarousel({ events, past = false }: { events: Event[]; past?
           </div>
         </div>
       </div>
-      <div className="mt-5 flex items-center justify-between gap-4">
-        <p className="text-sm text-rss-muted">Seitlich scrollen für weitere Termine</p>
+      <div className="mt-5 flex justify-center">
         <div className="flex gap-2">
           <button type="button" className="termin-control" onClick={() => scroll("previous")} aria-label={`${label}: vorherige`}><ChevronLeft size={20} aria-hidden /></button>
           <button type="button" className="termin-control" onClick={() => scroll("next")} aria-label={`${label}: nächste`}><ChevronRight size={20} aria-hidden /></button>
