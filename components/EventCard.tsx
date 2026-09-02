@@ -17,7 +17,7 @@ export function EventCard({ event, past = false }: { event: Event; past?: boolea
           {time && <p className="flex items-start gap-3"><Clock3 className="shrink-0" size={19} aria-hidden /><span><strong>{time}</strong></span></p>}
         </div>
       </div>
-      <Link href={`/termine/${event.slug}`} className="btn-primary mt-auto pt-3">Details ansehen</Link>
+      <Link href={`/termine/${event.slug}`} className="btn-primary mt-6 pt-3">Details ansehen</Link>
     </article>
   );
 }
