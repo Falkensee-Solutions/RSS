@@ -110,6 +110,12 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                   </div>
                 </section>
 
+                {event.registrationUrl && (
+                  <a href={event.registrationUrl.trim()} target="_blank" rel="noreferrer" className="btn-primary mt-6 w-full">
+                    {event.registrationLabel || "Jetzt anmelden"} <ExternalLink size={17} aria-hidden />
+                  </a>
+                )}
+
                 {event.eventImage && (
                   <figure className="mt-10 overflow-hidden rounded-card border border-rss-border bg-white">
                     <Image src={event.eventImage} width={1600} height={1000} alt={`Bild zur Veranstaltung „${event.title}“`} className="h-auto w-full object-cover" />
@@ -145,22 +151,11 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                   </figure>
                 )}
 
-                {(event.registrationUrl || event.flyer) && (
+                {event.flyer && (
                   <div className="rounded-card border border-rss-border bg-white p-6 shadow-sm">
-                    {event.registrationUrl && (
-                      <>
-                        <h2 className="text-2xl">Dabei sein</h2>
-                        <p className="mt-2 text-sm text-rss-ink/70">{event.registrationNote || "Melde dich über unser Online-Formular für dieses Treffen an."}</p>
-                        <a href={event.registrationUrl.trim()} target="_blank" rel="noreferrer" className="btn-primary mt-5 w-full">
-                          {event.registrationLabel || "Jetzt anmelden"} <ExternalLink size={17} aria-hidden />
-                        </a>
-                      </>
-                    )}
-                    {event.flyer && (
-                      <a href={event.flyer} target="_blank" rel="noreferrer" className={`btn-secondary w-full ${event.registrationUrl ? "mt-3" : ""}`}>
-                        <Download size={17} aria-hidden /> Flyer ansehen / herunterladen
-                      </a>
-                    )}
+                    <a href={event.flyer} target="_blank" rel="noreferrer" className="btn-secondary w-full">
+                      <Download size={17} aria-hidden /> Flyer ansehen / herunterladen
+                    </a>
                   </div>
                 )}
               </aside>
