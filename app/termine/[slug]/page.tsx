@@ -43,13 +43,13 @@ function PartnerTile({ partner, compact = false }: { partner: Partner; compact?:
       width={480}
       height={240}
       alt={partner.url ? "" : partner.name}
-      className={`w-auto object-contain ${compact ? "max-h-12" : "max-h-14"}`}
+      className={`w-auto max-w-full object-contain ${compact ? "max-h-20" : "max-h-24"}`}
     />
   ) : (
     <span className="text-center text-sm font-medium text-rss-ink">{partner.name}</span>
   );
 
-  const shell = `group flex min-h-[104px] items-center justify-center rounded-2xl border border-rss-border bg-white p-5 transition-colors`;
+  const shell = `group flex min-h-[136px] items-center justify-center rounded-2xl border border-rss-border bg-white p-4 sm:p-5 transition-colors`;
 
   if (partner.url) {
     return (

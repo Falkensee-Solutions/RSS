@@ -18,55 +18,40 @@ export default function ImpressumPage() {
           <p className="eyebrow">Rechtliches</p>
           <h1 className="mt-3">Impressum</h1>
 
-          <div
-            role="note"
-            className="mt-8 rounded-card border-2 border-rss-yellow bg-rss-warm p-5 text-sm"
-          >
-            <strong>TODO:</strong> Impressum final durch Forum Dialog e.V.
-            prüfen und freigeben lassen. Die folgenden Angaben sind ein
-            Platzhalter mit öffentlich bekannten Kontaktdaten und ersetzen
-            keine vollständige Anbieterkennzeichnung gemäß § 5 DDG.
-          </div>
-
           <div className="mt-10 space-y-10 text-rss-ink/90">
             <section>
               <h2 className="font-serif text-2xl md:text-3xl">
                 Angaben gemäß § 5 DDG
               </h2>
               <p className="mt-3">
-                Forum Dialog e.V.
+                Forum Dialog e. V.
                 <br />
-                <em>TODO: Vollständige Postanschrift ergänzen.</em>
+                Anton-Wilhelm-Amo-Straße 34
+                <br />
+                10117 Berlin
               </p>
             </section>
 
             <section>
               <h2 className="font-serif text-2xl md:text-3xl">Vertreten durch</h2>
               <p className="mt-3">
-                <em>TODO: Vertretungsberechtigte Person/en ergänzen.</em>
+                1. Vorstandsvorsitzender: Osman Örs
               </p>
             </section>
 
             <section>
               <h2 className="font-serif text-2xl md:text-3xl">Kontakt</h2>
               <p className="mt-3">
-                Ansprechpartner: Erkam Cebi
-                <br />
-                Telefon: 030 31519988
+                Telefon: +49 (0)30 31 51 99 88
                 <br />
                 E-Mail:{" "}
-                <a className="underline" href="mailto:rssteam@forumdialog.org">
-                  rssteam@forumdialog.org
+                <a className="underline" href="mailto:berlin@forumdialog.org">
+                  berlin@forumdialog.org
                 </a>
                 <br />
-                Web:{" "}
-                <a
-                  className="underline"
-                  href="https://www.forumdialog.org/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  www.forumdialog.org
+                Datenschutz:{" "}
+                <a className="underline" href="mailto:datenschutz@forumdialog.org">
+                  datenschutz@forumdialog.org
                 </a>
               </p>
             </section>
@@ -74,7 +59,11 @@ export default function ImpressumPage() {
             <section>
               <h2 className="font-serif text-2xl md:text-3xl">Registereintrag</h2>
               <p className="mt-3">
-                <em>TODO: Registergericht und Vereinsregisternummer ergänzen.</em>
+                Eintragung im Vereinsregister
+                <br />
+                Registergericht: Charlottenburg
+                <br />
+                Registernummer: VR 27716 B
               </p>
             </section>
 
@@ -83,18 +72,32 @@ export default function ImpressumPage() {
                 Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
               </h2>
               <p className="mt-3">
-                <em>TODO: Verantwortliche Person mit Anschrift ergänzen.</em>
+                Erkam Cebi
+                <br />
+                Anton-Wilhelm-Amo-Straße 34, 10117 Berlin
               </p>
             </section>
 
             <section>
               <h2 className="font-serif text-2xl md:text-3xl">Haftungsausschluss</h2>
               <p className="mt-3">
-                Inhalte dieser Website werden mit größtmöglicher Sorgfalt
-                erstellt. Für Richtigkeit, Vollständigkeit und Aktualität
-                der Inhalte kann jedoch keine Gewähr übernommen werden. Für
-                externe Links sind ausschließlich deren Betreiber
-                verantwortlich.
+                Als Diensteanbieter sind wir für eigene Inhalte auf diesen
+                Seiten nach den allgemeinen Gesetzen verantwortlich. Eine
+                permanente Kontrolle verlinkter externer Seiten ist ohne
+                konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.
+                Bei Bekanntwerden von Rechtsverletzungen werden entsprechende
+                Inhalte oder Links umgehend entfernt.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-serif text-2xl md:text-3xl">Urheberrecht</h2>
+              <p className="mt-3">
+                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
+                dieser Website unterliegen dem deutschen Urheberrecht. Eine
+                Vervielfältigung, Bearbeitung oder Verbreitung außerhalb der
+                Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung
+                der jeweiligen Rechteinhaber.
               </p>
             </section>
           </div>
