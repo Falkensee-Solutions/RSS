@@ -11,8 +11,10 @@ import { StanceSection } from "@/components/sections/StanceSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { InquirySection } from "@/components/sections/InquirySection";
 import { UpcomingMeetings } from "@/components/UpcomingMeetings";
+import { getEvents, isPastEvent } from "@/lib/events";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const events = (await getEvents()).filter((event) => !isPastEvent(event));
   return (
     <>
       <Header />
@@ -22,7 +24,7 @@ export default function HomePage() {
           <div className="container-rss">
             <p className="eyebrow">Kommende Treffen</p>
             <h2 className="mt-3">Aktuelle Termine</h2>
-            <UpcomingMeetings />
+            <UpcomingMeetings events={events} />
           </div>
         </section>
         <FormatSection />

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "comfy-mcp": {
+      "command": "/Users/erkamcebi/Code/RSS/.venv/bin/comfy-mcp",
+      "env": {
+        "COMFY_BIN": "/Users/erkamcebi/Code/RSS/.venv/bin/comfy",
+        "COMFY_PROJECT": "/Users/erkamcebi/Code/RSS/comfy-project",
+        "COMFY_LOCAL_URL": "http://127.0.0.1:8188",
+        "COMFY_MCP_ASSUME_CONSENT": ""
+      }
+    }
+  }
+}

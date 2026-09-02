@@ -1,4 +1,6 @@
 # Dependencies
+.venv/
+comfy-project/
 node_modules/
 
 # Next.js
