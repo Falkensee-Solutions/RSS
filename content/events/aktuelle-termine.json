@@ -4,19 +4,16 @@
   "published": true,
   "startDate": "2026-09-12T13:00:00+02:00",
   "endDate": "2026-09-12T14:30:00+02:00",
-  "weekday": "Samstag",
-  "time": "13:00-14:30",
   "duration": "90 Minuten",
   "location": "Allmende-Kontor e.V.",
   "address": "Gemeinschaftsgarten Allmende-Kontor e.V. c/o Nachbarschaftstreff Schillerkiez Mahlower Straße 27 12049 Berlin",
+  "mapUrl": "",
   "summary": "Zweites Treffen: Wenn ein Ort zum gemeinsamen Raum wird.",
-  "body": [
-    {
-      "type": "paragraph",
-      "text": "Unser zweites Treffen führt uns an einen besonderen Ort: das Allmende-Kontor auf dem Tempelhofer Feld.\n\nDiesmal verlassen wir unseren gewohnten Raum und lassen uns von der Umgebung inspirieren. Gemeinsam werden wir etwas gestalten, ausprobieren und dabei den Ort auf eine neue Weise kennenlernen.\n\nWas genau wir an diesem Nachmittag machen, verraten wir noch nicht.\n\nDanach wird es wieder einen Moment der Stille geben. Wir nehmen wahr, was um uns herum passiert, lassen den Ort auf uns wirken und geben unseren Gedanken Raum.\n\nZum Schluss kommen unsere Stimmen dazu. Was haben wir erlebt? Was haben wir entdeckt? Und was entsteht, wenn wir gemeinsam an einem neuen Ort zusammenkommen?\n\nDas erfährst du erst vor Ort."
-    }
-  ],
+  "body": "Unser zweites Treffen führt uns an einen besonderen Ort: das Allmende-Kontor auf dem Tempelhofer Feld.\n\nDiesmal verlassen wir unseren gewohnten Raum und lassen uns von der Umgebung inspirieren. Gemeinsam werden wir etwas gestalten, ausprobieren und dabei den Ort auf eine neue Weise kennenlernen.\n\nWas genau wir an diesem Nachmittag machen, verraten wir noch nicht.\n\nDanach wird es wieder einen Moment der Stille geben. Wir nehmen wahr, was um uns herum passiert, lassen den Ort auf uns wirken und geben unseren Gedanken Raum.\n\nZum Schluss kommen unsere Stimmen dazu. Was haben wir erlebt? Was haben wir entdeckt? Und was entsteht, wenn wir gemeinsam an einem neuen Ort zusammenkommen?\n\nDas erfährst du erst vor Ort.",
   "registrationUrl": "",
+  "registrationLabel": "Jetzt anmelden",
+  "registrationNote": "Kostenlos · begrenzte Plätze",
+  "flyerImage": "",
   "flyer": "/public/uploads/Design ohne Titel (1).png",
   "gallery": [],
   "partners": [
@@ -32,5 +29,7 @@
       "url": "",
       "logo": "/uploads/B_SEN_KuGZ_Logo_DE_H_PT_4C.png"
     }
-  ]
+  ],
+  "time": "13:00-14:30",
+  "weekday": "Samstag"
 }
