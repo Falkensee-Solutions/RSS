@@ -17,7 +17,7 @@ export function EventCarousel({ events, past = false }: { events: Event[]; past?
   }
 
   return (
-    <div className="mt-8">
+    <div className="mt-6 md:mt-8">
       <div className="termin-carousel-shell">
         <div className="termin-viewport" data-carousel={past ? "past" : "upcoming"} aria-label={label}>
           <div className="termin-grid">
@@ -25,7 +25,7 @@ export function EventCarousel({ events, past = false }: { events: Event[]; past?
           </div>
         </div>
       </div>
-      <div className="mt-5 flex justify-center">
+      <div className="mt-4 flex justify-center md:mt-5">
         <div className="flex gap-2">
           <button type="button" className="termin-control" onClick={() => scroll("previous")} aria-label={`${label}: vorherige`}><ChevronLeft size={20} aria-hidden /></button>
           <button type="button" className="termin-control" onClick={() => scroll("next")} aria-label={`${label}: nächste`}><ChevronRight size={20} aria-hidden /></button>

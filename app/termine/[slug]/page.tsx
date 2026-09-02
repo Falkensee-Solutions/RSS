@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays, Clock3, Download, ExternalLink, MapPin } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FlyerLightbox } from "@/components/FlyerLightbox";
 import { getEventBySlug, getEvents } from "@/lib/events";
 import { eventBodyToMarkdown, formatEventDateLong, formatEventTimeRange } from "@/lib/event-types";
 import type { Partner } from "@/lib/event-types";
@@ -147,7 +148,7 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
               <aside className="space-y-5 lg:sticky lg:top-24">
                 {event.flyerImage && (
                   <figure className="overflow-hidden rounded-card border border-rss-border bg-white shadow-sm">
-                    <Image src={event.flyerImage} width={1000} height={1414} alt={`Flyer zur Veranstaltung „${event.title}“`} className="h-auto w-full" priority />
+                    <FlyerLightbox image={event.flyerImage} flyer={event.flyer} title={event.title} />
                   </figure>
                 )}
 

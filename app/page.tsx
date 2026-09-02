@@ -28,7 +28,7 @@ export default async function HomePage() {
             <p className="eyebrow">Kommende Treffen</p>
             <h2 className="mt-3">Aktuelle Termine</h2>
             <UpcomingMeetings events={events} />
-            <div className="mt-20 border-t border-rss-border/70 pt-14">
+            <div className="mt-14 border-t border-rss-border/70 pt-10 md:mt-20 md:pt-14">
               <p className="eyebrow">Archiv</p>
               <h2 className="mt-3">Vergangene Termine</h2>
               <p className="mt-4 max-w-2xl text-rss-ink/80">Hier findest du Eindrücke und Informationen zu vergangenen Veranstaltungen.</p>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, Globe, Instagram } from "lucide-react";
 import { LogoMark } from "./Logo";
 
@@ -95,6 +96,20 @@ export function Footer() {
         <p className="mt-12 border-t border-rss-border pt-6 text-sm text-rss-muted">
           © {new Date().getFullYear()} Forum Dialog e.V. – Raum. Stille. Stimme.
         </p>
+
+        <div className="mt-10 flex flex-col items-center text-center">
+          <Image
+            src="/images/Partnerlogos/senat%20logo.png"
+            alt="Logo des Berliner Senats"
+            width={420}
+            height={160}
+            className="h-auto w-full max-w-[26rem] object-contain"
+          />
+          <p className="mt-4 text-sm text-rss-muted">
+            Gefördert durch die Senatsverwaltung für Kultur und Gesellschaftlichen
+            Zusammenhalt.
+          </p>
+        </div>
       </div>
     </footer>
   );

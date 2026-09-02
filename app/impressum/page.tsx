@@ -72,7 +72,7 @@ export default function ImpressumPage() {
                 Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
               </h2>
               <p className="mt-3">
-                Erkam Cebi
+                Burcunur Elmas
                 <br />
                 Anton-Wilhelm-Amo-Straße 34, 10117 Berlin
               </p>

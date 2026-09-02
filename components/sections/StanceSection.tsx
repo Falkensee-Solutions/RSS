@@ -23,11 +23,6 @@ export function StanceSection() {
             respektvollen Umgang mit unterschiedlichen religiösen,
             weltanschaulichen und persönlichen Perspektiven.
           </p>
-
-          <blockquote className="mt-8 rounded-card border-l-4 border-rss-yellow bg-rss-sand/60 p-6 font-serif text-xl md:text-2xl">
-            Die Teilnehmerinnen müssen nichts beweisen. Sie dürfen einfach da
-            sein, zuhören, gestalten und sprechen.
-          </blockquote>
         </div>
 
         <div className="card">
