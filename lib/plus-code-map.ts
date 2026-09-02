@@ -18,6 +18,11 @@ const REFERENCE_POINTS = [
   },
 ] as const;
 
+// Short Plus Codes for event locations are recovered relative to Berlin.
+// The two calibration locations above are reference points only and are not
+// rendered as event markers.
+const BERLIN_RECOVERY_LOCATION: Coordinates = { latitude: 52.52, longitude: 13.405 };
+
 const plusCode = new OpenLocationCode();
 
 function codePart(value: string) {
@@ -30,18 +35,13 @@ export function decodePlusCode(value: string): Coordinates | null {
 
   try {
     const fullCode = plusCode.isShort(code)
-      ? plusCode.recoverNearest(code, nearestReference(code).latitude, nearestReference(code).longitude)
+      ? plusCode.recoverNearest(code, BERLIN_RECOVERY_LOCATION.latitude, BERLIN_RECOVERY_LOCATION.longitude)
       : code;
     const area = plusCode.decode(fullCode);
     return { latitude: area.latitudeCenter, longitude: area.longitudeCenter };
   } catch {
     return null;
   }
-}
-
-function nearestReference(code: string): Coordinates {
-  const exact = REFERENCE_POINTS.find((point) => point.plusCode === code);
-  return exact?.reference ?? REFERENCE_POINTS[0].reference;
 }
 
 export function coordinatesToPixel(coordinates: Coordinates): MapPoint {
