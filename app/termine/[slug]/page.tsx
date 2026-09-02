@@ -95,16 +95,16 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
 
             <div className="mt-10 grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(300px,390px)] lg:gap-14">
               <div className="min-w-0">
-                <section aria-label="Termindetails" className="grid overflow-hidden rounded-card border border-rss-border bg-rss-sand sm:grid-cols-3">
-                  <div className="flex gap-3 border-b border-rss-border p-5 sm:border-b-0 sm:border-r sm:p-6">
+                <section aria-label="Termindetails" className="grid grid-cols-2 overflow-hidden rounded-card border border-rss-border bg-rss-sand">
+                  <div className="flex gap-3 border-b border-rss-border p-5 sm:p-6">
                     <CalendarDays className="mt-0.5 shrink-0" size={21} aria-hidden />
                     <p className="text-sm"><strong className="block text-rss-ink">Datum</strong><span className="mt-1 block">{formatEventDateLong(event.startDate)}</span></p>
                   </div>
-                  <div className="flex gap-3 border-b border-rss-border p-5 sm:border-b-0 sm:border-r sm:p-6">
+                  <div className="flex gap-3 border-b border-rss-border p-5 sm:p-6">
                     <Clock3 className="mt-0.5 shrink-0" size={21} aria-hidden />
-                    <p className="text-sm"><strong className="block text-rss-ink">Uhrzeit</strong><span className="mt-1 block">{time}{event.duration ? <><br />{event.duration}</> : null}</span></p>
+                    <p className="text-sm"><strong className="block text-rss-ink">Uhrzeit</strong><span className="mt-1 block">{time}</span></p>
                   </div>
-                  <div className="flex gap-3 p-5 sm:p-6">
+                  <div className="row-span-2 flex gap-3 border-l border-rss-border p-5 sm:p-6">
                     <MapPin className="mt-0.5 shrink-0" size={21} aria-hidden />
                     <p className="text-sm"><strong className="block text-rss-ink">Ort</strong><span className="mt-1 block">{event.location}{event.address ? <><br />{event.address}</> : null}</span>{event.mapUrl && <a href={event.mapUrl} target="_blank" rel="noreferrer" className="mt-2 inline-flex items-center gap-1 font-semibold underline underline-offset-2">Karte öffnen <ExternalLink size={13} aria-hidden /></a>}</p>
                   </div>
