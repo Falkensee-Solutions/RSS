@@ -6,6 +6,10 @@ backend:
   branch: main
 
 media_folder: /public/uploads
+public_folder: /uploads
+
+editor:
+  preview: false
 
 collections:
   - name: events
@@ -16,28 +20,25 @@ collections:
     extension: json
     format: json
     slug: "{{slug}}"
+    summary: "{{title}} — {{startDate}}"
     sortable_fields: [startDate, title]
     fields:
-      - { label: Titel, name: title, widget: string }
-      - { label: URL-Slug, name: slug, widget: string, hint: "Nur Kleinbuchstaben und Bindestriche, z. B. erstes-treffen" }
-      - { label: Veröffentlicht, name: published, widget: boolean, default: false }
-      - { label: Beginn, name: startDate, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "DD.MM.YYYY", time_format: "HH:mm" }
-      - { label: Ende, name: endDate, widget: datetime, required: false, format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "DD.MM.YYYY", time_format: "HH:mm" }
-      - { label: Wochentag, name: weekday, widget: string, required: false }
-      - { label: Anzeigezeit, name: time, widget: string, required: false }
-      - { label: Dauer, name: duration, widget: string, required: false }
-      - { label: Ort, name: location, widget: string, required: false }
+      - { label: Titel, name: title, widget: string, hint: "Der große Titel auf der Detailseite und in der Terminübersicht." }
+      - { label: URL-Slug, name: slug, widget: string, pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Bitte nur Kleinbuchstaben, Zahlen und Bindestriche verwenden.'], hint: "Teil der URL, z. B. erstes-treffen. Nach Veröffentlichung möglichst nicht mehr ändern." }
+      - { label: Veröffentlicht, name: published, widget: boolean, default: false, hint: "Erst aktivieren, wenn alle Angaben geprüft sind." }
+      - { label: Beginn, name: startDate, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "DD.MM.YYYY", time_format: "HH:mm", hint: "Datum und Uhrzeit werden auf der Website automatisch formatiert." }
+      - { label: Ende, name: endDate, widget: datetime, required: false, format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "DD.MM.YYYY", time_format: "HH:mm", hint: "Zusammen mit dem Beginn ergibt sich automatisch die angezeigte Uhrzeit." }
+      - { label: Dauer (optional), name: duration, widget: string, required: false, hint: "Nur ergänzen, wenn zusätzlich z. B. „90 Minuten“ erscheinen soll." }
+      - { label: Ort, name: location, widget: string, required: false, hint: "Name des Veranstaltungsorts, z. B. Forum Dialog." }
       - { label: Adresse, name: address, widget: string, required: false }
-      - { label: Kurzbeschreibung, name: summary, widget: text, required: false }
-      - label: Beschreibung
-        name: body
-        widget: list
-        required: false
-        fields:
-          - { label: Typ, name: type, widget: select, options: [paragraph, heading], default: paragraph }
-          - { label: Text, name: text, widget: text }
-      - { label: Anmeldelink, name: registrationUrl, widget: url, required: false }
-      - { label: Flyer, name: flyer, widget: file, required: false, media_folder: /public/uploads, public_folder: /uploads }
+      - { label: Kartenlink, name: mapUrl, widget: url, required: false, hint: "Optionaler Link zu Google Maps oder OpenStreetMap." }
+      - { label: Kurzbeschreibung, name: summary, widget: text, required: false, hint: "Ein bis zwei Sätze. Erscheint direkt unter dem Titel und in Suchmaschinen." }
+      - { label: Beschreibung, name: body, widget: markdown, required: false, minimal: true, buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote], editor_components: [], hint: "Hier normal schreiben und mit der Werkzeugleiste Überschriften, Listen, Fettungen oder Links einfügen. Leerzeilen erzeugen neue Absätze." }
+      - { label: Anmeldelink, name: registrationUrl, widget: url, required: false, hint: "Vollständige URL zum Anmeldeformular. Ohne Link erscheint kein Anmelde-Button." }
+      - { label: Text auf dem Anmelde-Button, name: registrationLabel, widget: string, required: false, default: "Jetzt anmelden" }
+      - { label: Hinweis zur Anmeldung, name: registrationNote, widget: text, required: false, hint: "Kurzer Hinweis, z. B. „Kostenlos · begrenzte Plätze“.", default: "Kostenlos · begrenzte Plätze" }
+      - { label: Flyerbild, name: flyerImage, widget: image, required: false, hint: "Hochformatiges JPG, PNG oder WebP. Wird rechts auf der Detailseite angezeigt." }
+      - { label: Flyer zum Herunterladen, name: flyer, widget: file, required: false, hint: "Optional: PDF-Datei für den Download-Button." }
       - label: Galerie
         name: gallery
         widget: list
@@ -50,15 +51,18 @@ collections:
         name: partners
         widget: list
         required: false
+        summary: "{{fields.name}}"
+        hint: "Jeder Partner erhält Name, eigene Website und Logo. Das Logo ist auf der Website anklickbar."
         fields:
           - { label: Name, name: name, widget: string }
-          - { label: Website, name: url, widget: url, required: false }
-          - { label: Logo, name: logo, widget: image, required: false, media_folder: /public/uploads, public_folder: /uploads }
+          - { label: Website, name: url, widget: url, required: false, hint: "Vollständige URL inklusive https://" }
+          - { label: Logo, name: logo, widget: image, required: false }
       - label: Förderer
         name: funders
         widget: list
         required: false
+        summary: "{{fields.name}}"
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Website, name: url, widget: url, required: false }
-          - { label: Logo, name: logo, widget: image, required: false, media_folder: /public/uploads, public_folder: /uploads }
+          - { label: Logo, name: logo, widget: image, required: false }

@@ -178,6 +178,39 @@
   .legal-content em {
     @apply not-italic text-rss-muted;
   }
+
+  /* Redaktioneller Veranstaltungstext aus Sveltia (sicheres Markdown). */
+  .event-content {
+    @apply max-w-3xl text-rss-ink/85;
+  }
+  .event-content h2 {
+    @apply mt-12 text-3xl leading-tight first:mt-0 md:text-4xl;
+  }
+  .event-content h3 {
+    @apply mt-9 text-2xl leading-snug;
+  }
+  .event-content p {
+    @apply mt-4 leading-relaxed;
+  }
+  .event-content ul,
+  .event-content ol {
+    @apply mt-5 space-y-2 pl-6;
+  }
+  .event-content ul {
+    @apply list-disc;
+  }
+  .event-content ol {
+    @apply list-decimal;
+  }
+  .event-content li::marker {
+    @apply font-semibold text-rss-ink;
+  }
+  .event-content a {
+    @apply font-medium underline decoration-rss-yellow-dark decoration-2 underline-offset-2 hover:text-rss-ink;
+  }
+  .event-content blockquote {
+    @apply my-7 border-l-4 border-rss-yellow bg-rss-sand px-5 py-4 font-serif text-xl italic text-rss-ink;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
