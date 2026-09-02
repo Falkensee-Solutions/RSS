@@ -22,7 +22,7 @@ export type Event = {
   address?: string;
   summary?: string;
   published?: boolean;
-  body?: { type: "paragraph"; text: string }[];
+  body?: { type: "paragraph" | "heading"; text: string }[];
   registrationUrl?: string;
   flyer?: string | null;
   gallery?: { image: string; alt?: string; caption?: string }[];

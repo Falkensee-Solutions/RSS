@@ -11,20 +11,21 @@
   "address": "Mohrenstraße 34, 10117 Berlin",
   "summary": "Unser erstes Treffen von Raum. Stille. Stimme.",
   "body": [
-    {
-      "type": "paragraph",
-      "text": "Wir beginnen mit einer kleinen kreativen Überraschung. Jede Teilnehmerin gestaltet etwas Eigenes – auf ihre Weise, mit ihren eigenen Entscheidungen und Ideen."
-    },
-    {
-      "type": "paragraph",
-      "text": "Was daraus am Ende entsteht, verraten wir noch nicht."
-    }
+    { "type": "heading", "text": "Unser erstes Treffen: Was entsteht, wenn viele Einzelne zusammenkommen?" },
+    { "type": "paragraph", "text": "Wir beginnen mit einer kleinen kreativen Überraschung. Jede Teilnehmerin gestaltet etwas Eigenes – auf ihre Weise, mit ihren eigenen Entscheidungen und Ideen." },
+    { "type": "paragraph", "text": "Was daraus am Ende entsteht, verraten wir noch nicht." },
+    { "type": "paragraph", "text": "Danach wird es für einen Moment ruhig. Wir betrachten, was entstanden ist, nehmen wahr und lassen unsere Gedanken wirken. Ohne sofort erklären oder antworten zu müssen." },
+    { "type": "paragraph", "text": "Zum Schluss kommen unsere Stimmen dazu. Was haben wir wahrgenommen? Was verändert sich, wenn Einzelnes Teil von etwas Gemeinsamen wird?" },
+    { "type": "heading", "text": "Was genau an diesem Nachmittag entsteht?" },
+    { "type": "paragraph", "text": "Das erfährst du erst vor Ort." }
   ],
   "registrationUrl": "https://forms.gle/1pCUXmCfv5BVJJmt8",
   "flyer": null,
   "gallery": [],
   "partners": [
-    { "name": "House of One", "logo": "/images/Partnerlogos/hoo logo.png" }
+    { "name": "Evangelische Kirchengemeinde Berlin-Britz", "logo": "/images/Partnerlogos/britz evangelisch logo.png" },
+    { "name": "House of One", "logo": "/images/Partnerlogos/hoo logo.png" },
+    { "name": "St. Johannes", "logo": "/images/Partnerlogos/st johannes logo.png" }
   ],
   "funders": [
     { "name": "Senat von Berlin", "logo": "/images/Partnerlogos/senat logo.png" }

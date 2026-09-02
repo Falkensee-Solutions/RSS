@@ -29,7 +29,13 @@ collections:
       - { label: Ort, name: location, widget: string, required: false }
       - { label: Adresse, name: address, widget: string, required: false }
       - { label: Kurzbeschreibung, name: summary, widget: text, required: false }
-      - { label: Beschreibung, name: body, widget: list, required: false, field: { label: Absatz, name: text, widget: text } }
+      - label: Beschreibung
+        name: body
+        widget: list
+        required: false
+        fields:
+          - { label: Typ, name: type, widget: select, options: [paragraph, heading], default: paragraph }
+          - { label: Text, name: text, widget: text }
       - { label: Anmeldelink, name: registrationUrl, widget: url, required: false }
       - { label: Flyer, name: flyer, widget: file, required: false, media_folder: /public/uploads, public_folder: /uploads }
       - label: Galerie
@@ -37,7 +43,7 @@ collections:
         widget: list
         required: false
         fields:
-          - { label: Bild, name: image, widget: image }
+          - { label: Bild, name: image, widget: image, media_folder: /public/uploads, public_folder: /uploads }
           - { label: Alternativtext, name: alt, widget: string }
           - { label: Bildunterschrift, name: caption, widget: string, required: false }
       - label: Partner
@@ -47,7 +53,7 @@ collections:
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Website, name: url, widget: url, required: false }
-          - { label: Logo, name: logo, widget: image, required: false }
+          - { label: Logo, name: logo, widget: image, required: false, media_folder: /public/uploads, public_folder: /uploads }
       - label: Förderer
         name: funders
         widget: list
@@ -55,4 +61,4 @@ collections:
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Website, name: url, widget: url, required: false }
-          - { label: Logo, name: logo, widget: image, required: false }
+          - { label: Logo, name: logo, widget: image, required: false, media_folder: /public/uploads, public_folder: /uploads }
