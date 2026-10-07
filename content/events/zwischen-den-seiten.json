@@ -18,6 +18,12 @@
   "flyerImage": "",
   "flyer": "",
   "gallery": [],
-  "partners": [],
+  "partners": [
+    {
+      "name": "Helene-Nathan-Bibliothek",
+      "url": "",
+      "logo": ""
+    }
+  ],
   "funders": []
 }
