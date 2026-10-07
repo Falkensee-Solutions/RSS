@@ -18,6 +18,12 @@
   "flyerImage": "",
   "flyer": "",
   "gallery": [],
-  "partners": [],
+  "partners": [
+    {
+      "name": "RuDi Nachbarschaftshaus",
+      "url": "",
+      "logo": ""
+    }
+  ],
   "funders": []
 }
