@@ -26,6 +26,15 @@ Sveltia benötigt für GitHub-Backends eine OAuth-Anmeldung. Falls die Anmeldung
 
 Nach dem Commit startet GitHub Actions automatisch den Website-Build.
 
+### Wenn Änderungen nicht auf der Website erscheinen
+
+1. Unter **GitHub → Actions → Deploy to GitHub Pages** den neuesten Lauf öffnen.
+2. Erst wenn **build** und **deploy** erfolgreich abgeschlossen sind, ist der neue Stand veröffentlicht. Bei einem fehlgeschlagenen Build bleibt die bisherige Website online.
+3. Bei **pending** prüfen, ob ein älterer Lauf auf **waiting** hängt. Einen veralteten, blockierten Lauf abbrechen; anschließend kann der neueste Lauf weiterlaufen.
+4. Bei **waiting** die Umgebung **Settings → Environments → github-pages** prüfen: `main` muss als Deployment-Branch erlaubt sein; gegebenenfalls eine angeforderte Freigabe erteilen.
+
+Der Workflow ersetzt bei neuen Änderungen ältere laufende Veröffentlichungen, damit der neueste Stand nicht dauerhaft hinter einem blockierten Lauf wartet. Er verwendet Ubuntu 24.04 und Actions mit Node.js-24-Laufzeit; die Anwendung selbst wird weiterhin mit Node.js 22 gebaut. Node.js-Deprecation- und Ubuntu-Migrationshinweise allein sind keine Buildfehler. Bei **build: failure** ist die konkrete Fehlermeldung im Build-Schritt maßgeblich.
+
 ## 4. Wie wird daraus die Detailseite?
 
 Sveltia ist nur die Eingabemaske. Beim Speichern legt es für jeden Termin eine
