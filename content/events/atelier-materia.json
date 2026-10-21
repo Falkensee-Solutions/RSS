@@ -1,0 +1,29 @@
+{
+  "title": "Atelier Materia",
+  "slug": "atelier-materia",
+  "published": false,
+  "startDate": "2026-12-19T13:00:00+01:00",
+  "endDate": "2026-12-19T14:30:00+01:00",
+  "duration": "90",
+  "location": "",
+  "address": "",
+  "mapUrl": "",
+  "plusCode": "",
+  "summary": "",
+  "body": "",
+  "registrationUrl": "",
+  "registrationLabel": "Jetzt anmelden",
+  "registrationNote": "Kostenlos · begrenzte Plätze",
+  "eventImage": "",
+  "flyerImage": "",
+  "flyer": "",
+  "gallery": [],
+  "partners": [
+    {
+      "name": "Atelier Materia Berlin",
+      "url": "",
+      "logo": "https://www.ateliermateriaberlin.com/"
+    }
+  ],
+  "funders": []
+}
