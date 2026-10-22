@@ -25,5 +25,11 @@
       "logo": "https://gemeinschaftswerk-nachhaltigkeit.de/app/api/v1/files/7bef1aa2-db06-4ab3-8a06-96a9ad76ed94.jpg"
     }
   ],
-  "funders": []
+  "funders": [
+    {
+      "name": "Senat",
+      "url": "",
+      "logo": "/images/partner/senat-berlin.png"
+    }
+  ]
 }
