@@ -25,5 +25,11 @@
       "logo": "https://www.st-johannes-spandau.de/uploads/sBEce5ct/631x0_480x0/400pngdpilogocropped__msi___png.webp"
     }
   ],
-  "funders": []
+  "funders": [
+    {
+      "name": "Senatsverwaltung für Kultur und Gesellschaftlichen Zusammenhalt",
+      "url": "",
+      "logo": "/images/partner/senat-berlin.png"
+    }
+  ]
 }
