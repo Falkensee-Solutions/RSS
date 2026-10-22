@@ -25,5 +25,11 @@
       "logo": "https://rudi-nachbarschaftshaus.de/wp-content/uploads/2024/12/2015_RuDi-Logo_klein_transparent.png"
     }
   ],
-  "funders": []
+  "funders": [
+    {
+      "name": "Senat",
+      "url": "",
+      "logo": "/images/partner/senat-berlin.png"
+    }
+  ]
 }
