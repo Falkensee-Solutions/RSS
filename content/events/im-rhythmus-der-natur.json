@@ -19,5 +19,11 @@
   "flyer": "",
   "gallery": [],
   "partners": [],
-  "funders": []
+  "funders": [
+    {
+      "name": "Senatsverwaltung für Kultur und Gesellschaftlichen Zusammenhalt",
+      "url": "",
+      "logo": ""
+    }
+  ]
 }
