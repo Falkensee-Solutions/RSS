@@ -92,7 +92,14 @@ Die Website sortiert veröffentlichte Veranstaltungen beim Build automatisch anh
 - aktuelle Termine,
 - vergangene Termine.
 
-Nachträglich ergänzte Bilder erscheinen beim nächsten Commit/Build auf der Detailseite des Termins.
+Das Enddatum muss am oder nach dem Startdatum liegen. Ein Termin wird erst nach
+seinem Ende archiviert. Fehlt das Enddatum, ist es ungültig oder liegt es vor dem
+Startdatum, verwendet die Website für die Einordnung das Startdatum. Fehlerhafte
+Datumsangaben trotzdem im CMS korrigieren, damit auch die angezeigte Uhrzeit stimmt.
+
+Die Einordnung wird beim Build berechnet, nicht bei jedem Seitenaufruf.
+Nachträglich ergänzte Bilder und korrigierte Termine erscheinen beim nächsten
+Commit/Build auf der Website.
 
 ## 6. Redaktioneller Hinweis
 

@@ -27,6 +27,9 @@ export async function getEventBySlug(slug: string) {
 }
 
 export function isPastEvent(event: Event, now = new Date()) {
-  return new Date(event.endDate || event.startDate).getTime() < now.getTime();
+  const start = new Date(event.startDate).getTime();
+  const end = new Date(event.endDate || event.startDate).getTime();
+  const effectiveEnd = Number.isFinite(end) && end >= start ? end : start;
+  return effectiveEnd < now.getTime();
 }
 
