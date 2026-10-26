@@ -1,7 +1,7 @@
 {
   "title": "Atelier Materia",
   "slug": "atelier-materia",
-  "published": false,
+  "published": true,
   "startDate": "2026-12-19T13:00:00+01:00",
   "endDate": "2026-12-19T14:30:00+01:00",
   "duration": "90 Minuten",
@@ -14,7 +14,7 @@
   "registrationUrl": "https://forms.gle/trXdHAesUhhf5h1XA",
   "registrationLabel": "Jetzt anmelden",
   "registrationNote": "Kostenlos · begrenzte Plätze",
-  "eventImage": "",
+  "eventImage": "/uploads/Güneşli Seramik Atölyesi Masası.png",
   "flyerImage": "",
   "flyer": "",
   "gallery": [],
