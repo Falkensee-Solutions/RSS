@@ -12,7 +12,7 @@ export function EventCard({ event, past = false }: { event: Event; past?: boolea
   return (
     <article className="card-sand termin-card flex min-h-[300px] flex-col shadow-sm">
       <div>
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-white">
+            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl">
               <Image
                 src={image || logoImage}
                 alt={image ? `Bild zum Termin „${event.title}“` : "Raum. Stille. Stimme. Logo"}
