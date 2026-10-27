@@ -1,0 +1,35 @@
+{
+  "title": "St. Markus Kirche",
+  "slug": "stmarkus-kirche",
+  "published": true,
+  "startDate": "2026-11-07T12:00:00+01:00",
+  "endDate": "2026-11-07T13:30:00+01:00",
+  "duration": "90 Minuten",
+  "location": "St. Markus Kirche",
+  "address": "Am Kiesteich 50 13589 Berlin",
+  "mapUrl": "",
+  "plusCode": "",
+  "summary": "",
+  "body": "",
+  "registrationUrl": "",
+  "registrationLabel": "Jetzt anmelden",
+  "registrationNote": "Kostenlos · begrenzte Plätze",
+  "eventImage": "/uploads/Güneşli Modern Şapel İç Mekânı.png",
+  "flyerImage": "",
+  "flyer": "",
+  "gallery": [],
+  "partners": [
+    {
+      "name": "St. Markus Kirche",
+      "url": "",
+      "logo": "https://www.st-johannes-spandau.de/uploads/sBEce5ct/631x0_480x0/400pngdpilogocropped__msi___png.webp"
+    }
+  ],
+  "funders": [
+    {
+      "name": "Senatsverwaltung für Kultur und Gesellschaftlichen Zusammenhalt",
+      "url": "",
+      "logo": "/images/partner/senat-berlin.png"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Atelier Materia",
+  "slug": "atelier-materia",
+  "published": true,
+  "startDate": "2026-12-19T13:00:00+01:00",
+  "endDate": "2026-12-19T14:30:00+01:00",
+  "duration": "90 Minuten",
+  "location": "Atelier Materia",
+  "address": "Bänschstr. 46, 10247 Berlin",
+  "mapUrl": "",
+  "plusCode": "",
+  "summary": "",
+  "body": "",
+  "registrationUrl": "https://forms.gle/trXdHAesUhhf5h1XA",
+  "registrationLabel": "Jetzt anmelden",
+  "registrationNote": "Kostenlos · begrenzte Plätze",
+  "eventImage": "/uploads/Güneşli Seramik Atölyesi Masası.png",
+  "flyerImage": "",
+  "flyer": "",
+  "gallery": [],
+  "partners": [
+    {
+      "name": "Atelier Materia Berlin",
+      "url": "",
+      "logo": "https://www.ateliermateriaberlin.com/"
+    }
+  ],
+  "funders": [
+    {
+      "name": "Senatsverwaltung für Kultur und Gesellschaftlichen Zusammenhalt",
+      "url": "",
+      "logo": "/images/partner/senat-berlin.png"
+    }
+  ]
+}

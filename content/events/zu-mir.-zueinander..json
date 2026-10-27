@@ -14,7 +14,7 @@
   "registrationUrl": "https://forms.gle/fpRyCPEksHRhUiY8A",
   "registrationLabel": "Jetzt anmelden",
   "registrationNote": "Kostenlos · begrenzte Plätze",
-  "eventImage": "/uploads/Minimalist Rulo Mat İllüstrasyonu.png",
+  "eventImage": "/uploads/Krem Sarılı Desenli Mat Rulosu.png",
   "flyerImage": "",
   "flyer": "/uploads/signal-2026-10-09-15-54-49-595_002.jpg",
   "gallery": [],
@@ -25,5 +25,11 @@
       "logo": "https://rudi-nachbarschaftshaus.de/wp-content/uploads/2024/12/2015_RuDi-Logo_klein_transparent.png"
     }
   ],
-  "funders": []
+  "funders": [
+    {
+      "name": "Senatsverwaltung für Kultur und Gesellschaftlichen Zusammenhalt",
+      "url": "",
+      "logo": "/images/partner/senat-berlin.png"
+    }
+  ]
 }
