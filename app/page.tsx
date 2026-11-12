@@ -12,6 +12,7 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { InquirySection } from "@/components/sections/InquirySection";
 import { UpcomingMeetings } from "@/components/UpcomingMeetings";
 import { EventCarousel } from "@/components/EventCarousel";
+import { VisitedPlacesMap } from "@/components/VisitedPlacesMap";
 import { getEvents, isPastEvent } from "@/lib/events";
 
 export default async function HomePage() {
@@ -28,6 +29,7 @@ export default async function HomePage() {
             <p className="eyebrow">Kommende Treffen</p>
             <h2 className="mt-3">Aktuelle Termine</h2>
             <UpcomingMeetings events={events} />
+            <VisitedPlacesMap events={pastEvents} />
             <div className="mt-14 border-t border-rss-border/70 pt-10 md:mt-20 md:pt-14">
               <p className="eyebrow">Archiv</p>
               <h2 className="mt-3">Vergangene Termine</h2>

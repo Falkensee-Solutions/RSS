@@ -79,6 +79,16 @@ docs/                 # Inhalts- und Designbriefings
 public/og.svg         # Platzhalter Open-Graph-Bild
 ```
 
+## Karte vergangener Treffen
+
+Auf der Startseite steht zwischen den aktuellen Terminen und dem Archiv eine
+lokale Berlin-Karte. Nummerierte Markierungen und die zugehörige Ortsliste
+verlinken auf die jeweilige Veranstaltungsseite. Angezeigt werden veröffentlichte,
+vergangene Termine mit gültigem `plusCode` innerhalb des Kartenausschnitts.
+Fehlende Standorte können in den Veranstaltungsdaten ergänzt werden; es werden
+keine Koordinaten geschätzt. Die Karte lädt keine externen Google-Dienste.
+Wie die Terminlisten wird sie beim nächsten statischen Build aktualisiert.
+
 ## Inhaltliche Leitplanken
 
 - Kein Religionsunterricht, keine Missionierung, kein Podium.
