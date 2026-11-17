@@ -13,7 +13,10 @@ import { Markdown } from "@/lib/markdown";
 
 export async function generateStaticParams() {
   const events = await getEvents();
-  return events.map((event) => ({ slug: event.slug }));
+  return events.flatMap((event) => [
+    { slug: event.slug },
+    ...(event._id !== event.slug ? [{ slug: event._id }] : []),
+  ]);
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

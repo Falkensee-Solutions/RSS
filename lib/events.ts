@@ -23,7 +23,7 @@ export async function getEvents(): Promise<Event[]> {
 
 export async function getEventBySlug(slug: string) {
   const events = await getEvents();
-  return events.find((event) => event.slug === slug);
+  return events.find((event) => event.slug === slug) ?? events.find((event) => event._id === slug);
 }
 
 export function isPastEvent(event: Event, now = new Date()) {
