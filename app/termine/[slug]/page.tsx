@@ -114,6 +114,13 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                   </div>
                 </section>
 
+                {event.participation && (
+                  <section aria-labelledby="event-participation-heading" className="mt-8 max-w-3xl">
+                    <h2 id="event-participation-heading" className="text-2xl md:text-3xl">Teilnahme</h2>
+                    <div className="event-content mt-1"><Markdown>{event.participation}</Markdown></div>
+                  </section>
+                )}
+
                 {event.registrationUrl && (
                   <a href={event.registrationUrl.trim()} target="_blank" rel="noreferrer" className="btn-primary mt-6 w-full">
                     {event.registrationLabel || "Jetzt anmelden"} <ExternalLink size={17} aria-hidden />

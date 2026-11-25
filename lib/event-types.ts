@@ -26,6 +26,7 @@ export type Event = {
   plusCode?: string;
   summary?: string;
   published?: boolean;
+  participation?: string;
   /** Markdown-Text aus dem CMS. */
   body?: string | LegacyBodyBlock[];
   registrationUrl?: string;
