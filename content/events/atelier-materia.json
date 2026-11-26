@@ -16,8 +16,8 @@
   "registrationLabel": "Jetzt anmelden",
   "registrationNote": "Kostenlos · begrenzte Plätze",
   "eventImage": "/uploads/Portakal Olmadan El Sanatları Düzeni.png",
-  "flyerImage": "/uploads/Atelier Materia (3).jpg",
-  "flyer": "",
+  "flyerImage": "",
+  "flyer": "/uploads/Atelier Materia (3).jpg",
   "gallery": [],
   "partners": [
     {
